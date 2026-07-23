@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme{
+  --font-noto-sans: "noto sans", sans-serf;
+  --font-noto-sans-jp: "noto sans jp", sans-serif;
+}
+
+body, html{
+  overflow-x: hidden;
+}

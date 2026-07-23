@@ -1,0 +1,12 @@
+package routes
+
+import (
+	"backpoint-partners/controllers"
+
+	"github.com/gin-gonic/gin"
+)
+
+func WordRoutes(router *gin.Engine) {
+	router.GET("/words", controllers.GetWords)
+	router.GET("/word/:id", controllers.GetWordById)
+}

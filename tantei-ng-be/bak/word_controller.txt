@@ -1,0 +1,78 @@
+package controllers
+
+import (
+	"backpoint-partners/auxiliary"
+	"backpoint-partners/models"
+	"context"
+	"encoding/json"
+	"fmt"
+	"net/http"
+
+	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/v2/bson"
+	"go.mongodb.org/mongo-driver/v2/mongo"
+)
+
+type response_struct struct {
+	Success bool   `json:"success"`
+	Msg     string `json:"msg"`
+	Payload any    `json:"payload"`
+}
+
+var collection *mongo.Collection = models.WordCollection()
+
+func GetWords(c *gin.Context) {
+	var res response_struct
+
+	var cursor, err = collection.Find(context.TODO(), bson.D{})
+
+	var results []bson.M
+
+	err = cursor.All(context.TODO(), &results)
+
+	if err != nil {
+		panic(err)
+	}
+
+	res.Success = true
+	res.Msg = "Retrieved words!"
+	res.Payload = results
+
+	c.IndentedJSON(http.StatusOK, res)
+}
+
+func GetWordById(c *gin.Context) {
+	var err error
+	var id string = c.Param("id")
+
+	bson_id, err := bson.ObjectIDFromHex(id)
+
+	var result bson.M
+	err = collection.FindOne(context.TODO(), bson.D{{"_id", bson_id}}).Decode(&result)
+
+	if err != nil {
+		c.IndentedJSON(http.StatusNotFound, bson.D{{"success", false}, {"msg", "Document not found!"}})
+		return
+	}
+
+	var res bson.M = bson.M{"success": true, "msg": "Document found!", "payload": result}
+
+	c.IndentedJSON(http.StatusOK, res)
+}
+
+func GetWordByIdP(collection *mongo.Collection, id bson.ObjectID, ref_collection_name string) {
+	var result bson.M
+	var err error = collection.FindOne(context.TODO(), bson.D{{"_id", id}}).Decode(&result)
+
+	if err != nil {
+		fmt.Printf("Error: %s\n", err)
+	}
+
+	auxiliary.Populate(&result, "sets", "sets", bson.D{{"name", 1}, {"owner", 1}})
+
+	// fmt.Printf("%s\n", *test_pop)
+
+	jsonData, err := json.MarshalIndent(result, "", "	")
+
+	fmt.Printf("%s\n", jsonData)
+}
