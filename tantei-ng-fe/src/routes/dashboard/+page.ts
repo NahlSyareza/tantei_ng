@@ -6,7 +6,7 @@ export const load: PageLoad = async ({ params }) => {
 		let data;
 		const res = await axios.get('http://localhost:28080/ng_sets');
 
-		console.log(res.data);
+		// console.log(res.data);
 		return { res: res.data };
 	} catch (error) {
 		console.error(error);

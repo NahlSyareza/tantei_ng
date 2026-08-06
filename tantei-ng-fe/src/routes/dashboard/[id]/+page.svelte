@@ -1,4 +1,7 @@
 <script lang="ts">
+	import play_button from '$lib/assets/play_button.png';
+	import edit_button from '$lib/assets/edit_button.png';
+
 	interface NgSetItem {
 		kanji: string;
 		furigana: string;
@@ -8,10 +11,10 @@
 	}
 
 	interface NgSet {
-		_id: string;
+		// _id: string;
 		name: string;
-		createdAt: string;
-		updatedAt: string;
+		// createdAt: string;
+		// updatedAt: string;
 		items: NgSetItem[];
 	}
 
@@ -32,7 +35,7 @@
 	function generateNewSequence() {
 		availableAnswers = [];
 
-		if (data.c.items.length <= 1) {
+		if (data.c.items.length < 1) {
 			// console.log('Refill imminent');
 			data.c.items = structuredClone(data.o.items);
 			remainingCounter = data.o.items.length;
@@ -89,7 +92,7 @@
 		if (selectedQuestion!.english === answer) {
 			generateNewSequence();
 		}
-		// console.log(`${answer}`);
+		console.log(`${answer}`);
 	}
 
 	function getStyle(item: NgSetItem) {
@@ -103,28 +106,83 @@
 			}
 		}
 
-		return 'text-2xl h-16 w-48 flex-1 rounded-xl bg-[#D5CEBE]';
+		return 'text-2xl h-32 w-150 rounded-xl bg-[#D5CEBE]';
+	}
+
+	let questionDisplayType = 'english';
+
+	function getQuestionDisplayType(item: NgSetItem) {
+		if (questionDisplayType == 'furigana') {
+			return item.furigana;
+		}
+
+		if (questionDisplayType == 'indonesian') {
+			return item.indonesian;
+		}
+
+		if (questionDisplayType == 'kanji') {
+			return item.kanji;
+		}
+
+		return item.english;
+	}
+
+	let answerDisplayType = 'kanji';
+
+	function getAnswerDisplayType(item: NgSetItem) {
+		if (answerDisplayType == 'furigana') {
+			return item.furigana;
+		}
+
+		if (answerDisplayType == 'indonesian') {
+			return item.indonesian;
+		}
+
+		if (answerDisplayType == 'kanji') {
+			return item.kanji;
+		}
+
+		return item.english;
 	}
 </script>
 
 <div class="flex flex-1 flex-col">
-	<p>{remainingCounter} / {data.o.items.length}</p>
 	{#if !hasStarted}
-		<div class="flex flex-1 items-center justify-center">
-			<button class="rounded-xl bg-[#D5CEBE] p-8 text-2xl text-black" onclick={handleStartButton}
-				>Start</button
-			>
+		<div class="mb-10 flex flex-col rounded-b-2xl bg-[#E6E3D1]">
+			<div class="flex flex-col items-center justify-center space-y-4 p-8">
+				<p class="text-4xl font-bold">{data.o.name}</p>
+				<p class="text-2xl font-bold">{data.o.items.length} words</p>
+			</div>
+			<div class="flex justify-center space-x-8 p-8">
+				<button onclick={handleStartButton}>
+					<img src={play_button} alt="play_button.svg" class="h-16" />
+				</button>
+
+				<img src={edit_button} alt="edit_button.svg" class="h-16" />
+			</div>
+		</div>
+
+		<div class="mb-8 flex flex-wrap justify-center gap-5">
+			{#each data.o.items as item, index (index)}
+				<div class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#D5CEBE]">
+					<p class="text-2xl font-semibold">{item.kanji}</p>
+				</div>
+			{/each}
 		</div>
 	{:else}
-		<div class="flex flex-1 p-8">
-			<p class="flex flex-1 items-center justify-center rounded-xl bg-[#E6E3D1] text-4xl">
-				{selectedQuestion!.kanji}
+		<p>{remainingCounter} / {data.o.items.length}</p>
+		<div class="flex flex-4 p-4 font-semibold">
+			<p class="flex flex-1 items-center justify-center rounded-xl bg-[#E6E3D1] text-6xl">
+				<!-- {selectedQuestion!.kanji} -->
+				{getQuestionDisplayType(selectedQuestion!)}
 			</p>
 		</div>
-		<div class="flex flex-1 items-center space-x-2 p-8">
-			{#each availableAnswers as items}
-				<button onclick={() => handleAnswerButtonClick(items.english)} class={getStyle(items)}
-					>{items.english}</button
+		<div
+			class="flex flex-1 flex-wrap items-center justify-center gap-5 space-x-2 px-8 font-semibold"
+		>
+			{#each availableAnswers as item, index (index)}
+				<button onclick={() => handleAnswerButtonClick(item.english)} class={getStyle(item)}
+					>{getAnswerDisplayType(item)}</button
 				>
 			{/each}
 		</div>

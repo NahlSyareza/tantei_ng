@@ -60,9 +60,9 @@ func CreateNgSet(c *gin.Context) {
 
 	var err = c.BindJSON(&doc)
 
-	doc.Id = bson.NewObjectID()
-	doc.CreatedAt = bson.NewObjectID().Timestamp()
-	doc.UpdatedAt = bson.NewObjectID().Timestamp()
+	// doc.Id = bson.NewObjectID()
+	// doc.CreatedAt = bson.NewObjectID().Timestamp()
+	// doc.UpdatedAt = bson.NewObjectID().Timestamp()
 
 	if err != nil {
 		panic(err)
@@ -70,7 +70,9 @@ func CreateNgSet(c *gin.Context) {
 
 	collection.InsertOne(context.TODO(), doc)
 
-	c.IndentedJSON(http.StatusCreated, doc)
+	c.IndentedJSON(http.StatusCreated, gin.H{
+		"message": "Created new set!",
+	})
 }
 
 func AddNgSetItem(c *gin.Context) {

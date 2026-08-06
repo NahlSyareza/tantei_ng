@@ -1,6 +1,7 @@
 <script lang="ts">
 	import axios from 'axios';
 	import type { PageProps } from './$types';
+	import { resolve } from '$app/paths';
 
 	interface NgSet {
 		_id: string;
@@ -66,9 +67,12 @@
 				<p class="text-2xl font-semibold">{name}</p>
 			</div>
 		{/each} -->
-		<div class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#E6E3D1]">
+		<a
+			href={resolve('/dashboard/create_new_set')}
+			class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#E6E3D1]"
+		>
 			<p class="text-4xl font-semibold">+</p>
-		</div>
+		</a>
 	</div>
 </div>
 <div class="flex flex-1 flex-col p-6">
