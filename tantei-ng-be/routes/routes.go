@@ -20,6 +20,7 @@ func NgSetRoutes(router *gin.Engine) {
 	// router.POST("/account/owned/:oid", controllers.OwnedSetsByAccount)
 
 	router.POST("/tracker/remove_item", controllers.RemoveItemTracker)
-	// param1: oid, 
+	// param1: oid,
 	router.POST("/tracker/reset/:param1", controllers.ResetTracker)
+	router.POST("/tracker/refresh/:param1", controllers.RefreshCheckTracker)
 }

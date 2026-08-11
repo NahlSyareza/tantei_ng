@@ -32,11 +32,19 @@ type AccountSchema struct {
 	Password string        `bson:"password,omitempty" json:"password,omitempty"`
 }
 
+type TrackerRefreshType string
+
+const (
+	Daily  TrackerRefreshType = "Daily"
+	Weekly TrackerRefreshType = "Weekly"
+)
+
 type TrackerSchema struct {
-	Id            bson.ObjectID   `bson:"_id,omitempty" json:"_id,omitempty"`
-	Owner         bson.ObjectID   `bson:"owner,omitempty" json:"owner,omitempty"`
-	RemainingSets []bson.ObjectID `bson:"remaining_sets,omitempty" json:"remaining_sets,omitempty"`
-	LastTime      time.Time       `bson:"last_time,omitempty" json:"last_time,omitempty"`
+	Id            bson.ObjectID      `bson:"_id,omitempty" json:"_id,omitempty"`
+	Owner         bson.ObjectID      `bson:"owner,omitempty" json:"owner,omitempty"`
+	RemainingSets []bson.ObjectID    `bson:"remaining_sets,omitempty" json:"remaining_sets,omitempty"`
+	LastTime      time.Time          `bson:"last_time,omitempty" json:"last_time,omitempty"`
+	RefreshType   TrackerRefreshType `bson:"refresh_type,omitempty" json:"refresh_type,omitempty"`
 }
 
 func NgSetCollection() *mongo.Collection {
