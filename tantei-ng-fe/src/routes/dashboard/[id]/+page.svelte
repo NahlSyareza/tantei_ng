@@ -1,6 +1,7 @@
 <script lang="ts">
 	import play_button from '$lib/assets/play_button.png';
 	import edit_button from '$lib/assets/edit_button.png';
+	import axios from 'axios';
 
 	interface NgSetItem {
 		kanji: string;
@@ -22,6 +23,7 @@
 		data
 	}: {
 		data: {
+			id: string;
 			o: NgSet;
 			c: NgSet;
 		};
@@ -32,13 +34,28 @@
 	let hasStarted: boolean = $state(false);
 	let remainingCounter: number = $state(0);
 
-	function generateNewSequence() {
+	// function restartSet() {
+	// 	data.c.items = structuredClone(data.o.items);
+	// 	remainingCounter = data.o.items.length;
+	// }
+
+	async function generateNewSequence() {
 		availableAnswers = [];
 
 		if (data.c.items.length < 1) {
 			// console.log('Refill imminent');
 			data.c.items = structuredClone(data.o.items);
 			remainingCounter = data.o.items.length;
+
+			let payload = {
+				set_id: data.id,
+				owner_id: '6a74bac987651dbbb3c2e71f'
+			};
+
+			const res = await axios.post(`http://localhost:28080/tracker/remove_item`, payload);
+
+			console.log(payload);
+			console.log(res.data);
 		}
 
 		while (availableAnswers.length < 4) {
@@ -92,7 +109,7 @@
 		if (selectedQuestion!.english === answer) {
 			generateNewSequence();
 		}
-		console.log(`${answer}`);
+		// console.log(`${answer}`);
 	}
 
 	function getStyle(item: NgSetItem) {
@@ -147,6 +164,8 @@
 </script>
 
 <div class="flex flex-1 flex-col">
+	{#if data.c.items.length > 0}{:else}{/if}
+
 	{#if !hasStarted}
 		<div class="mb-10 flex flex-col rounded-b-2xl bg-[#E6E3D1]">
 			<div class="flex flex-col items-center justify-center space-y-4 p-8">

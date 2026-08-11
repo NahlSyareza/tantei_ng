@@ -65,7 +65,7 @@ func LoginAccount(c *gin.Context) {
 		return
 	}
 
-	OwnedSetsByAccount(doc.Id.Hex())
+	OwnedSetsAccount(doc.Id.Hex())
 
 	c.IndentedJSON(http.StatusOK, gin.H{
 		"message": "Correct password, blin",
@@ -74,7 +74,7 @@ func LoginAccount(c *gin.Context) {
 
 // Integrated into the login func already
 // func OwnedSetsByAccount(c* gin.Context){
-func OwnedSetsByAccount(oid_par string) {
+func OwnedSetsAccount(oid_par string) {
 	// Try retrieve ALL created sets from an owner
 	// oid is the owner's ObjectID
 	// oid, err := bson.ObjectIDFromHex(c.Param("oid"))
@@ -139,41 +139,4 @@ func OwnedSetsByAccount(oid_par string) {
 	// c.IndentedJSON(http.StatusOK, results)
 }
 
-type trackerHelper struct {
-	SetId   string `json:"set_id,omitempty"`
-	OwnerId string `json:"owner_id,omitempty"`
-}
-
 // Remove a recorded set from the tracker
-func RemoveRemainingItemFromTracker(c *gin.Context) {
-	var helperDoc trackerHelper
-
-	c.BindJSON(&helperDoc)
-
-	setId, err := bson.ObjectIDFromHex(helperDoc.SetId)
-	if err != nil {
-		panic(err)
-	}
-
-	ownerId, err := bson.ObjectIDFromHex(helperDoc.OwnerId)
-	if err != nil {
-		panic(err)
-	}
-
-	collection := models.TrackerCollection()
-
-	filter := bson.M{"owner": ownerId}
-	update := bson.M{"$pull": bson.M{"remaining_sets": setId}}
-	result, err := collection.UpdateOne(context.TODO(), filter, update)
-
-	if err != nil {
-		panic(err)
-	}
-
-	if result.MatchedCount == 0 {
-		c.JSON(http.StatusNotFound, gin.H{"message": "Item not found dawg"})
-		return
-	}
-
-	c.JSON(http.StatusOK, gin.H{"message": "Removed item dawg"})
-}
