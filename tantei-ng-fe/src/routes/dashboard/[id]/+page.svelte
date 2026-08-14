@@ -117,13 +117,13 @@
 
 		if (someBool) {
 			if (item.english === selectedQuestion!.english) {
-				return 'text-2xl h-16 w-48 flex-1 rounded-xl bg-green-500';
+				return 'flex flex-1 text-2xl flex-1 rounded-xl bg-green-500';
 			} else {
-				return 'text-2xl h-16 w-48 flex-1 rounded-xl bg-red-500';
+				return 'flex flex-1 text-2xl flex-1 rounded-xl bg-red-500';
 			}
 		}
 
-		return 'text-2xl h-32 w-150 rounded-xl bg-[#D5CEBE]';
+		return 'flex flex-1 text-2xl rounded-xl bg-[#D5CEBE] justify-center items-center';
 	}
 
 	let questionDisplayType = 'english';
@@ -163,47 +163,50 @@
 	}
 </script>
 
-<div class="flex flex-1 flex-col">
+<div class="flex flex-1">
 	{#if data.c.items.length > 0}{:else}{/if}
 
 	{#if !hasStarted}
-		<div class="mb-10 flex flex-col rounded-b-2xl bg-[#E6E3D1]">
-			<div class="flex flex-col items-center justify-center space-y-4 p-8">
-				<p class="text-4xl font-bold">{data.o.name}</p>
-				<p class="text-2xl font-bold">{data.o.items.length} words</p>
-			</div>
-			<div class="flex justify-center space-x-8 p-8">
-				<button onclick={handleStartButton}>
-					<img src={play_button} alt="play_button.svg" class="h-16" />
-				</button>
-
-				<img src={edit_button} alt="edit_button.svg" class="h-16" />
-			</div>
-		</div>
-
-		<div class="mb-8 flex flex-wrap justify-center gap-5">
-			{#each data.o.items as item, index (index)}
-				<div class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#D5CEBE]">
-					<p class="text-2xl font-semibold">{item.kanji}</p>
+		<div class="flex flex-1 flex-col">
+			<div class="mb-10 flex flex-col rounded-b-2xl bg-[#E6E3D1]">
+				<div class="flex flex-col items-center justify-center space-y-4 p-8">
+					<p class="text-4xl font-bold">{data.o.name}</p>
+					<p class="text-2xl font-bold">{data.o.items.length} words</p>
 				</div>
-			{/each}
+				<div class="flex justify-center space-x-8 p-8">
+					<button onclick={handleStartButton}>
+						<img src={play_button} alt="play_button.svg" class="h-16" />
+					</button>
+
+					<img src={edit_button} alt="edit_button.svg" class="h-16" />
+				</div>
+			</div>
+
+			<div class="mb-8 flex flex-wrap justify-center gap-5">
+				{#each data.o.items as item, index (index)}
+					<div class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#D5CEBE]">
+						<p class="text-2xl font-semibold">{item.kanji}</p>
+					</div>
+				{/each}
+			</div>
 		</div>
 	{:else}
 		<p>{remainingCounter} / {data.o.items.length}</p>
-		<div class="flex flex-4 p-4 font-semibold">
-			<p class="flex flex-1 items-center justify-center rounded-xl bg-[#E6E3D1] text-6xl">
-				<!-- {selectedQuestion!.kanji} -->
-				{getQuestionDisplayType(selectedQuestion!)}
-			</p>
+		<div class="flex-1"></div>
+		<div class="flex flex-3 flex-col">
+			<div class="m-4 flex flex-1">
+				<div class="flex flex-1 items-center justify-center rounded-xl bg-[#D5CEBE]">
+					<p class="text-4xl font-semibold">{getQuestionDisplayType(selectedQuestion!)}</p>
+				</div>
+			</div>
+			<div class="m-4 grid flex-1 grid-cols-2 gap-4">
+				{#each availableAnswers as item, index (index)}
+					<button onclick={() => handleAnswerButtonClick(item.english)} class={getStyle(item)}
+						><p class="text-3xl font-semibold">{getAnswerDisplayType(item)}</p></button
+					>
+				{/each}
+			</div>
 		</div>
-		<div
-			class="flex flex-1 flex-wrap items-center justify-center gap-5 space-x-2 px-8 font-semibold"
-		>
-			{#each availableAnswers as item, index (index)}
-				<button onclick={() => handleAnswerButtonClick(item.english)} class={getStyle(item)}
-					>{getAnswerDisplayType(item)}</button
-				>
-			{/each}
-		</div>
+		<div class="flex-1"></div>
 	{/if}
 </div>
