@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
+	"os"
 	"tantei-ng/routes"
 
 	"github.com/gin-gonic/gin"
@@ -43,7 +43,10 @@ func main() {
 	// router.GET("/", getRoot)
 	// router.GET("/books/:id", getBookById)
 
-	fmt.Println("Running a new Backpoint Partners instance!")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
 
 	router.Run(":3000")
 }
