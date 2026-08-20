@@ -77,57 +77,6 @@ func CreateNgSet(c *gin.Context) {
 	})
 }
 
-func AddNgSetItem(c *gin.Context) {
-	var collection *mongo.Collection = models.StudysetCollection()
-	var studysetParam = c.Param("studyset")
-
-	var setObjectID, err = bson.ObjectIDFromHex(studysetParam)
-
-	var result models.StudysetSchema
-	var doc models.StudywordSchema
-
-	err = c.BindJSON(&doc)
-
-	if err != nil {
-		panic(err)
-	}
-
-	var opts = options.FindOneAndUpdate().SetReturnDocument(options.After)
-	var filter bson.D = bson.D{{"_id", setObjectID}}
-	var update bson.D = bson.D{{"$push", bson.D{{"items", doc}}}}
-
-	err = collection.FindOneAndUpdate(context.TODO(), filter, update, opts).Decode(&result)
-
-	if err != nil {
-		panic(err)
-	}
-
-	c.IndentedJSON(http.StatusOK, result)
-}
-
-func RemoveNgSetItem(c *gin.Context) {
-	var collection *mongo.Collection = models.StudysetCollection()
-	var studysetParam = c.Param("studyset")
-
-	var setObjectID, err = bson.ObjectIDFromHex(studysetParam)
-	var doc models.StudywordSchema
-
-	err = c.BindJSON(&doc)
-
-	if err != nil {
-		panic(err)
-	}
-
-	var opts = options.FindOneAndUpdate().SetReturnDocument(options.After)
-	var filter = bson.D{{"_id", setObjectID}}
-	var update = bson.D{{"$pull", bson.D{{"items", doc}}}}
-
-	var result models.StudysetSchema
-	err = collection.FindOneAndUpdate(context.TODO(), filter, update, opts).Decode(&result)
-
-	c.IndentedJSON(http.StatusOK, result)
-}
-
 func AddNgSetItems(c *gin.Context) {
 	var collection mongo.Collection = *models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
@@ -146,21 +95,19 @@ func AddNgSetItems(c *gin.Context) {
 		panic(err)
 	}
 
-	var result models.StudysetSchema
+	// var result models.StudysetSchema
 
-	var options = options.FindOneAndUpdate().SetReturnDocument(options.After)
-	var filter bson.D = bson.D{{"_id", studySetObjectID}}
+	filter := bson.D{{"_id", studySetObjectID}}
+	update := bson.D{{"$push", bson.D{{"items", bson.D{{"$each", docs}}}}}}
 
-	for _, e := range docs {
-		var update bson.D = bson.D{{"$push", bson.D{{"items", e}}}}
-		err = collection.FindOneAndUpdate(context.TODO(), filter, update, options).Decode(&result)
+	_, err = collection.UpdateOne(context.TODO(), filter, update)
 
-		if err != nil {
-			panic(err)
-		}
+	if err != nil {
+		panic(err)
 	}
 
-	c.IndentedJSON(http.StatusOK, result)
+	// c.IndentedJSON(http.StatusOK, result)
+	c.IndentedJSON(http.StatusOK, gin.H{"msg": "Successfully added items!"})
 }
 
 func RemoveNgSetItems(c *gin.Context) {
@@ -181,19 +128,17 @@ func RemoveNgSetItems(c *gin.Context) {
 		panic(err)
 	}
 
-	var result models.StudysetSchema
+	// var result models.StudysetSchema
 
-	var options = options.FindOneAndUpdate().SetReturnDocument(options.After)
-	var filter bson.D = bson.D{{"_id", studySetObjectID}}
+	filter := bson.D{{"_id", studySetObjectID}}
+	update := bson.D{{"$pull", bson.D{{"items", bson.D{{"$each", docs}}}}}}
 
-	for _, e := range docs {
-		var update bson.D = bson.D{{"$pull", bson.D{{"items", e}}}}
-		err = collection.FindOneAndUpdate(context.TODO(), filter, update, options).Decode(&result)
+	_, err = collection.UpdateOne(context.TODO(), filter, update)
 
-		if err != nil {
-			panic(err)
-		}
+	if err != nil {
+		panic(err)
 	}
 
-	c.IndentedJSON(http.StatusOK, result)
+	// c.IndentedJSON(http.StatusOK, result)
+	c.IndentedJSON(http.StatusOK, gin.H{"msg": "Successfully removed items!"})
 }

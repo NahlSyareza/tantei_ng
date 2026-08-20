@@ -29,6 +29,24 @@ func GetRadicalLists(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, results)
 }
 
+func GetRadicalList(c *gin.Context) {
+	baseRadicalParam := c.Param("base_radical")
+
+	collection := models.RadicalListCollection()
+
+	filters := bson.D{{"base_radical", baseRadicalParam}}
+
+	var result models.RadicalListSchema
+
+	err := collection.FindOne(context.TODO(), filters).Decode(&result)
+
+	if err != nil {
+		panic(err)
+	}
+
+	c.IndentedJSON(http.StatusOK, result)
+}
+
 func CreateRadicalList(c *gin.Context) {
 	collection := models.RadicalListCollection()
 

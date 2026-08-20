@@ -10,32 +10,33 @@ import (
 
 type StudywordSchema struct {
 	Kanji      string `bson:"kanji" json:"kanji"`
+	Radical    string `bson:"radical" json:"radical"`
 	Furigana   string `bson:"furigana" json:"furigana"`
 	Latin      string `bson:"latin" json:"latin"`
 	English    string `bson:"english" json:"english"`
-	Indonesian string `bson:"indonesian" json:"indonesian"`
+	// Indonesian string `bson:"indonesian" json:"indonesian"`
 }
 
 type StudysetSchema struct {
 	Id    bson.ObjectID     `bson:"_id,omitempty" json:"_id,omitempty"`
-	Owner bson.ObjectID     `bson:"owner,omitempty" json:"owner,omitempty"`
-	Name  string            `bson:"name,omitempty" json:"name,omitempty"`
+	Owner bson.ObjectID     `bson:"owner" json:"owner"`
+	Name  string            `bson:"name" json:"name"`
 	Items []StudywordSchema `bson:"items,omitempty" json:"items,omitempty"`
 	// CreatedAt time.Time      `bson:"createdAt,omitempty" json:"createdAt,omitempty"`
 	// UpdatedAt time.Time      `bson:"updatedAt,omitempty" json:"updatedAt,omitempty"`
 }
 
 type RadicalListSchema struct {
-	Id              bson.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
-	BaseRadical     string        `bson:"base_radical,omitempty" json:"base_radical,omitempty"`
+	Id              bson.ObjectID `bson:"_id" json:"_id"`
+	BaseRadical     string        `bson:"base_radical" json:"base_radical"`
 	RadicalVariants []string      `bson:"radical_variants,omitempty" json:"radical_variants,omitempty"`
 }
 
 type AccountSchema struct {
 	Id       bson.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
-	Name     string        `bson:"name,omitempty" json:"name,omitempty"`
-	Email    string        `bson:"email,omitempty" json:"email,omitempty"`
-	Password string        `bson:"password,omitempty" json:"password,omitempty"`
+	Name     string        `bson:"name" json:"name"`
+	Email    string        `bson:"email" json:"email"`
+	Password string        `bson:"password" json:"password"`
 }
 
 type TrackerRefreshType string
@@ -47,10 +48,10 @@ const (
 
 type TrackerSchema struct {
 	Id            bson.ObjectID      `bson:"_id,omitempty" json:"_id,omitempty"`
-	Owner         bson.ObjectID      `bson:"owner,omitempty" json:"owner,omitempty"`
+	Owner         bson.ObjectID      `bson:"owner" json:"owner"`
 	RemainingSets []bson.ObjectID    `bson:"remaining_sets,omitempty" json:"remaining_sets,omitempty"`
 	LastTime      time.Time          `bson:"last_time,omitempty" json:"last_time,omitempty"`
-	RefreshType   TrackerRefreshType `bson:"refresh_type,omitempty" json:"refresh_type,omitempty"`
+	RefreshType   TrackerRefreshType `bson:"refresh_type" json:"refresh_type"`
 }
 
 func RadicalListCollection() *mongo.Collection {
