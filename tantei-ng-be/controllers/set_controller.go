@@ -13,11 +13,18 @@ import (
 
 func GetNgSets(c *gin.Context) {
 	// c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+	var paramOwner = c.Param("owner")
+	var ownerObjectID, err = bson.ObjectIDFromHex(paramOwner)
+
+	if err != nil {
+		panic(err)
+	}
 
 	var collection *mongo.Collection = models.NgSetCollection()
 
 	var opts = options.Find().SetProjection(bson.D{{"items", 0}})
-	var cursor, err = collection.Find(context.TODO(), bson.D{}, opts)
+	filter := bson.D{{"_id", ownerObjectID}}
+	cursor, err := collection.Find(context.TODO(), filter, opts)
 
 	var results []models.NgSetSchema
 
@@ -33,9 +40,9 @@ func GetNgSets(c *gin.Context) {
 func GetNgSet(c *gin.Context) {
 	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 	var collection *mongo.Collection = models.NgSetCollection()
-	var oid = c.Param("oid")
+	var ownerParam = c.Param("owner")
 
-	var _id, err = bson.ObjectIDFromHex(oid)
+	var _id, err = bson.ObjectIDFromHex(ownerParam)
 
 	if err != nil {
 		panic(err)
@@ -77,9 +84,9 @@ func CreateNgSet(c *gin.Context) {
 
 func AddNgSetItem(c *gin.Context) {
 	var collection *mongo.Collection = models.NgSetCollection()
-	var oid = c.Param("oid")
+	var ownerParam = c.Param("ownerParam")
 
-	var _id, err = bson.ObjectIDFromHex(oid)
+	var _id, err = bson.ObjectIDFromHex(ownerParam)
 
 	var result models.NgSetSchema
 	var doc models.NgWordSchema
@@ -105,9 +112,9 @@ func AddNgSetItem(c *gin.Context) {
 
 func RemoveNgSetItem(c *gin.Context) {
 	var collection *mongo.Collection = models.NgSetCollection()
-	var oid = c.Param("oid")
+	var ownerParam = c.Param("ownerParam")
 
-	var _id, err = bson.ObjectIDFromHex(oid)
+	var _id, err = bson.ObjectIDFromHex(ownerParam)
 	var doc models.NgWordSchema
 
 	err = c.BindJSON(&doc)
@@ -128,7 +135,7 @@ func RemoveNgSetItem(c *gin.Context) {
 
 func AddManyNgSetItem(c *gin.Context) {
 	var collection mongo.Collection = *models.NgSetCollection()
-	var oid = c.Param("oid")
+	var ownerParam = c.Param("ownerParam")
 
 	var docs []models.NgWordSchema
 
@@ -138,7 +145,7 @@ func AddManyNgSetItem(c *gin.Context) {
 		panic(err)
 	}
 
-	_id, err := bson.ObjectIDFromHex(oid)
+	_id, err := bson.ObjectIDFromHex(ownerParam)
 
 	if err != nil {
 		panic(err)
@@ -163,7 +170,7 @@ func AddManyNgSetItem(c *gin.Context) {
 
 func RemoveManyNgSetItem(c *gin.Context) {
 	var collection mongo.Collection = *models.NgSetCollection()
-	var oid = c.Param("oid")
+	var ownerParam = c.Param("ownerParam")
 
 	var docs []models.NgWordSchema
 
@@ -173,7 +180,7 @@ func RemoveManyNgSetItem(c *gin.Context) {
 		panic(err)
 	}
 
-	_id, err := bson.ObjectIDFromHex(oid)
+	_id, err := bson.ObjectIDFromHex(ownerParam)
 
 	if err != nil {
 		panic(err)

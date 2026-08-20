@@ -7,13 +7,13 @@ import (
 )
 
 func NgSetRoutes(router *gin.Engine) {
-	router.GET("/ng_sets", controllers.GetNgSets)
-	router.GET("/ng_set/:oid", controllers.GetNgSet)
+	router.GET("/ng_sets/:owner", controllers.GetNgSets)
+	router.GET("/ng_set/:owner", controllers.GetNgSet)
 	router.POST("/ng_set", controllers.CreateNgSet)
-	router.PUT("/ng_set/add/:oid", controllers.AddNgSetItem)
-	router.PUT("/ng_set/add_many/:oid", controllers.AddManyNgSetItem)
-	router.PUT("/ng_set/remove/:oid", controllers.RemoveNgSetItem)
-	router.PUT("/ng_set/remove_many/:oid", controllers.RemoveManyNgSetItem)
+	router.PUT("/ng_set/add/:owner", controllers.AddNgSetItem)
+	router.PUT("/ng_set/add_many/:owner", controllers.AddManyNgSetItem)
+	router.PUT("/ng_set/remove/:owner", controllers.RemoveNgSetItem)
+	router.PUT("/ng_set/remove_many/:owner", controllers.RemoveManyNgSetItem)
 
 	router.POST("/account/register", controllers.RegisterAccount)
 	router.POST("/account/login", controllers.LoginAccount)
