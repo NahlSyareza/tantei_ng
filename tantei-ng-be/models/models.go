@@ -8,7 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/v2/mongo"
 )
 
-type NgWordSchema struct {
+type StudywordSchema struct {
 	Kanji      string `bson:"kanji" json:"kanji"`
 	Furigana   string `bson:"furigana" json:"furigana"`
 	Latin      string `bson:"latin" json:"latin"`
@@ -16,11 +16,11 @@ type NgWordSchema struct {
 	Indonesian string `bson:"indonesian" json:"indonesian"`
 }
 
-type NgSetSchema struct {
-	Id    bson.ObjectID  `bson:"_id,omitempty" json:"_id,omitempty"`
-	Owner bson.ObjectID  `bson:"owner,omitempty" json:"owner,omitempty"`
-	Name  string         `bson:"name,omitempty" json:"name,omitempty"`
-	Items []NgWordSchema `bson:"items,omitempty" json:"items,omitempty"`
+type StudysetSchema struct {
+	Id    bson.ObjectID    `bson:"_id,omitempty" json:"_id,omitempty"`
+	Owner bson.ObjectID    `bson:"owner,omitempty" json:"owner,omitempty"`
+	Name  string           `bson:"name,omitempty" json:"name,omitempty"`
+	Items []StudysetSchema `bson:"items,omitempty" json:"items,omitempty"`
 	// CreatedAt time.Time      `bson:"createdAt,omitempty" json:"createdAt,omitempty"`
 	// UpdatedAt time.Time      `bson:"updatedAt,omitempty" json:"updatedAt,omitempty"`
 }
@@ -47,9 +47,9 @@ type TrackerSchema struct {
 	RefreshType   TrackerRefreshType `bson:"refresh_type,omitempty" json:"refresh_type,omitempty"`
 }
 
-func NgSetCollection() *mongo.Collection {
+func StudysetCollection() *mongo.Collection {
 	var dbClient *mongo.Client = db.DbConnect()
-	var collection *mongo.Collection = dbClient.Database("tantei").Collection("ng_sets")
+	var collection *mongo.Collection = dbClient.Database("tantei").Collection("studysets")
 
 	return collection
 }

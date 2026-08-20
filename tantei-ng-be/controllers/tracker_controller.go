@@ -19,7 +19,7 @@ func GetOwnedSetsAndSave(setIds *[]bson.ObjectID, _id bson.ObjectID) {
 		"owner": 1,
 	})
 
-	collection := models.NgSetCollection()
+	collection := models.StudysetCollection()
 
 	cursor, err := collection.Find(context.TODO(), filter, opts)
 
@@ -27,7 +27,7 @@ func GetOwnedSetsAndSave(setIds *[]bson.ObjectID, _id bson.ObjectID) {
 		panic(err)
 	}
 
-	var results []models.NgSetSchema
+	var results []models.StudysetSchema
 
 	cursor.All(context.TODO(), &results)
 

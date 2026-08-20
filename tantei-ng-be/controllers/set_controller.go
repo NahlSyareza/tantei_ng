@@ -20,13 +20,13 @@ func GetNgSets(c *gin.Context) {
 		panic(err)
 	}
 
-	var collection *mongo.Collection = models.NgSetCollection()
+	var collection *mongo.Collection = models.StudysetCollection()
 
 	var opts = options.Find().SetProjection(bson.D{{"items", 0}})
 	filter := bson.D{{"owner", ownerObjectID}}
 	cursor, err := collection.Find(context.TODO(), filter, opts)
 
-	var results []models.NgSetSchema
+	var results []models.StudysetSchema
 
 	err = cursor.All(context.TODO(), &results)
 
@@ -39,7 +39,7 @@ func GetNgSets(c *gin.Context) {
 
 func GetNgSet(c *gin.Context) {
 	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
-	var collection *mongo.Collection = models.NgSetCollection()
+	var collection *mongo.Collection = models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
 
 	var setObjectID, err = bson.ObjectIDFromHex(studysetParam)
@@ -50,7 +50,7 @@ func GetNgSet(c *gin.Context) {
 
 	var filter bson.D = bson.D{{"_id", setObjectID}}
 
-	var result models.NgSetSchema
+	var result models.StudysetSchema
 	err = collection.FindOne(context.TODO(), filter).Decode(&result)
 
 	if err != nil {
@@ -61,9 +61,9 @@ func GetNgSet(c *gin.Context) {
 }
 
 func CreateNgSet(c *gin.Context) {
-	var collection *mongo.Collection = models.NgSetCollection()
+	var collection *mongo.Collection = models.StudysetCollection()
 
-	var doc models.NgSetSchema
+	var doc models.StudysetSchema
 
 	var err = c.BindJSON(&doc)
 
@@ -79,13 +79,13 @@ func CreateNgSet(c *gin.Context) {
 }
 
 func AddNgSetItem(c *gin.Context) {
-	var collection *mongo.Collection = models.NgSetCollection()
+	var collection *mongo.Collection = models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
 
 	var setObjectID, err = bson.ObjectIDFromHex(studysetParam)
 
-	var result models.NgSetSchema
-	var doc models.NgWordSchema
+	var result models.StudysetSchema
+	var doc models.StudywordSchema
 
 	err = c.BindJSON(&doc)
 
@@ -107,11 +107,11 @@ func AddNgSetItem(c *gin.Context) {
 }
 
 func RemoveNgSetItem(c *gin.Context) {
-	var collection *mongo.Collection = models.NgSetCollection()
+	var collection *mongo.Collection = models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
 
 	var setObjectID, err = bson.ObjectIDFromHex(studysetParam)
-	var doc models.NgWordSchema
+	var doc models.StudywordSchema
 
 	err = c.BindJSON(&doc)
 
@@ -123,17 +123,17 @@ func RemoveNgSetItem(c *gin.Context) {
 	var filter = bson.D{{"_id", setObjectID}}
 	var update = bson.D{{"$pull", bson.D{{"items", doc}}}}
 
-	var result models.NgSetSchema
+	var result models.StudysetSchema
 	err = collection.FindOneAndUpdate(context.TODO(), filter, update, opts).Decode(&result)
 
 	c.IndentedJSON(http.StatusOK, result)
 }
 
 func AddManyNgSetItem(c *gin.Context) {
-	var collection mongo.Collection = *models.NgSetCollection()
+	var collection mongo.Collection = *models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
 
-	var docs []models.NgWordSchema
+	var docs []models.StudywordSchema
 
 	var err = c.BindJSON(&docs)
 
@@ -147,7 +147,7 @@ func AddManyNgSetItem(c *gin.Context) {
 		panic(err)
 	}
 
-	var result models.NgSetSchema
+	var result models.StudysetSchema
 
 	var options = options.FindOneAndUpdate().SetReturnDocument(options.After)
 	var filter bson.D = bson.D{{"_id", studySetObjectID}}
@@ -165,10 +165,10 @@ func AddManyNgSetItem(c *gin.Context) {
 }
 
 func RemoveManyNgSetItem(c *gin.Context) {
-	var collection mongo.Collection = *models.NgSetCollection()
+	var collection mongo.Collection = *models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
 
-	var docs []models.NgWordSchema
+	var docs []models.StudywordSchema
 
 	var err = c.BindJSON(&docs)
 
@@ -182,7 +182,7 @@ func RemoveManyNgSetItem(c *gin.Context) {
 		panic(err)
 	}
 
-	var result models.NgSetSchema
+	var result models.StudysetSchema
 
 	var options = options.FindOneAndUpdate().SetReturnDocument(options.After)
 	var filter bson.D = bson.D{{"_id", studySetObjectID}}

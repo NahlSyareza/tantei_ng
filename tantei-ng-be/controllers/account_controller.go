@@ -90,7 +90,7 @@ func OwnedSetsAccount(oid_par string) {
 		"owner": 1,
 	})
 
-	collection := models.NgSetCollection()
+	collection := models.StudysetCollection()
 
 	cursor, err := collection.Find(context.TODO(), filter, opts)
 
@@ -98,7 +98,7 @@ func OwnedSetsAccount(oid_par string) {
 		panic(err)
 	}
 
-	var results []models.NgSetSchema
+	var results []models.StudysetSchema
 
 	err = cursor.All(context.TODO(), &results)
 
