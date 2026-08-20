@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"os"
 	"tantei-ng/routes"
 
 	"github.com/gin-gonic/gin"
@@ -47,6 +48,10 @@ func main() {
 	// 	port = "3000"
 	// }
 
-	// router.Run(":3000")
-	router.Run()
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "3000"
+	}
+
+	router.Run(":" + port)
 }
