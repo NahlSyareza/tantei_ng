@@ -2,7 +2,6 @@ package main
 
 import (
 	"net/http"
-	"os"
 	"tantei-ng/routes"
 
 	"github.com/gin-gonic/gin"
@@ -43,10 +42,11 @@ func main() {
 	// router.GET("/", getRoot)
 	// router.GET("/books/:id", getBookById)
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "3000"
-	}
+	// port := os.Getenv("PORT")
+	// if port == "" {
+	// 	port = "3000"
+	// }
 
-	router.Run(":3000")
+	// router.Run(":3000")
+	router.Run()
 }
