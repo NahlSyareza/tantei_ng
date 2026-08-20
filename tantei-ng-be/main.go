@@ -1,34 +1,40 @@
 package main
 
 import (
-	"net/http"
 	"os"
 	"tantei-ng/routes"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
-func CORSMiddleware() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
-		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
-		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
-		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT, DELETE")
+// func CORSMiddleware() gin.HandlerFunc {
+// 	return func(c *gin.Context) {
+// 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+// 		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
+// 		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
+// 		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT, DELETE")
 
-		// Handle the browser preflight OPTIONS check
-		if c.Request.Method == "OPTIONS" {
-			c.AbortWithStatus(http.StatusNoContent) // Returns 204 with headers attached
-			return
-		}
+// 		// Handle the browser preflight OPTIONS check
+// 		if c.Request.Method == "OPTIONS" {
+// 			c.AbortWithStatus(http.StatusNoContent) // Returns 204 with headers attached
+// 			return
+// 		}
 
-		c.Next()
-	}
-}
+// 		c.Next()
+// 	}
+// }
 
 func main() {
 	var router *gin.Engine = gin.Default()
 
-	// router.Use(CORSMiddleware())
+	router.Use(cors.New(cors.Config{
+		AllowOrigins:     []string{"http://localhost:5173"},
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
+		AllowHeaders:     []string{"Origin"},
+		ExposeHeaders:    []string{"Content-Length"},
+		AllowCredentials: true,
+	}))
 
 	router.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
