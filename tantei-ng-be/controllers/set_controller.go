@@ -38,7 +38,6 @@ func GetNgSets(c *gin.Context) {
 }
 
 func GetNgSet(c *gin.Context) {
-	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 	var collection *mongo.Collection = models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
 

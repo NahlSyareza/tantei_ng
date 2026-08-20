@@ -17,10 +17,10 @@ type StudywordSchema struct {
 }
 
 type StudysetSchema struct {
-	Id    bson.ObjectID    `bson:"_id,omitempty" json:"_id,omitempty"`
-	Owner bson.ObjectID    `bson:"owner,omitempty" json:"owner,omitempty"`
-	Name  string           `bson:"name,omitempty" json:"name,omitempty"`
-	Items []StudysetSchema `bson:"items,omitempty" json:"items,omitempty"`
+	Id    bson.ObjectID     `bson:"_id,omitempty" json:"_id,omitempty"`
+	Owner bson.ObjectID     `bson:"owner,omitempty" json:"owner,omitempty"`
+	Name  string            `bson:"name,omitempty" json:"name,omitempty"`
+	Items []StudywordSchema `bson:"items,omitempty" json:"items,omitempty"`
 	// CreatedAt time.Time      `bson:"createdAt,omitempty" json:"createdAt,omitempty"`
 	// UpdatedAt time.Time      `bson:"updatedAt,omitempty" json:"updatedAt,omitempty"`
 }
