@@ -23,7 +23,7 @@ func GetNgSets(c *gin.Context) {
 	var collection *mongo.Collection = models.NgSetCollection()
 
 	var opts = options.Find().SetProjection(bson.D{{"items", 0}})
-	filter := bson.D{{"_id", ownerObjectID}}
+	filter := bson.D{{"owner", ownerObjectID}}
 	cursor, err := collection.Find(context.TODO(), filter, opts)
 
 	var results []models.NgSetSchema
@@ -40,15 +40,15 @@ func GetNgSets(c *gin.Context) {
 func GetNgSet(c *gin.Context) {
 	c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
 	var collection *mongo.Collection = models.NgSetCollection()
-	var ownerParam = c.Param("owner")
+	var studysetParam = c.Param("studyset")
 
-	var _id, err = bson.ObjectIDFromHex(ownerParam)
+	var setObjectID, err = bson.ObjectIDFromHex(studysetParam)
 
 	if err != nil {
 		panic(err)
 	}
 
-	var filter bson.D = bson.D{{"_id", _id}}
+	var filter bson.D = bson.D{{"_id", setObjectID}}
 
 	var result models.NgSetSchema
 	err = collection.FindOne(context.TODO(), filter).Decode(&result)
@@ -67,10 +67,6 @@ func CreateNgSet(c *gin.Context) {
 
 	var err = c.BindJSON(&doc)
 
-	// doc.Id = bson.NewObjectID()
-	// doc.CreatedAt = bson.NewObjectID().Timestamp()
-	// doc.UpdatedAt = bson.NewObjectID().Timestamp()
-
 	if err != nil {
 		panic(err)
 	}
@@ -84,9 +80,9 @@ func CreateNgSet(c *gin.Context) {
 
 func AddNgSetItem(c *gin.Context) {
 	var collection *mongo.Collection = models.NgSetCollection()
-	var ownerParam = c.Param("ownerParam")
+	var studysetParam = c.Param("studyset")
 
-	var _id, err = bson.ObjectIDFromHex(ownerParam)
+	var setObjectID, err = bson.ObjectIDFromHex(studysetParam)
 
 	var result models.NgSetSchema
 	var doc models.NgWordSchema
@@ -98,7 +94,7 @@ func AddNgSetItem(c *gin.Context) {
 	}
 
 	var opts = options.FindOneAndUpdate().SetReturnDocument(options.After)
-	var filter bson.D = bson.D{{"_id", _id}}
+	var filter bson.D = bson.D{{"_id", setObjectID}}
 	var update bson.D = bson.D{{"$push", bson.D{{"items", doc}}}}
 
 	err = collection.FindOneAndUpdate(context.TODO(), filter, update, opts).Decode(&result)
@@ -112,9 +108,9 @@ func AddNgSetItem(c *gin.Context) {
 
 func RemoveNgSetItem(c *gin.Context) {
 	var collection *mongo.Collection = models.NgSetCollection()
-	var ownerParam = c.Param("ownerParam")
+	var studysetParam = c.Param("studyset")
 
-	var _id, err = bson.ObjectIDFromHex(ownerParam)
+	var setObjectID, err = bson.ObjectIDFromHex(studysetParam)
 	var doc models.NgWordSchema
 
 	err = c.BindJSON(&doc)
@@ -124,7 +120,7 @@ func RemoveNgSetItem(c *gin.Context) {
 	}
 
 	var opts = options.FindOneAndUpdate().SetReturnDocument(options.After)
-	var filter = bson.D{{"_id", _id}}
+	var filter = bson.D{{"_id", setObjectID}}
 	var update = bson.D{{"$pull", bson.D{{"items", doc}}}}
 
 	var result models.NgSetSchema
@@ -135,7 +131,7 @@ func RemoveNgSetItem(c *gin.Context) {
 
 func AddManyNgSetItem(c *gin.Context) {
 	var collection mongo.Collection = *models.NgSetCollection()
-	var ownerParam = c.Param("ownerParam")
+	var studysetParam = c.Param("studyset")
 
 	var docs []models.NgWordSchema
 
@@ -145,7 +141,7 @@ func AddManyNgSetItem(c *gin.Context) {
 		panic(err)
 	}
 
-	_id, err := bson.ObjectIDFromHex(ownerParam)
+	studySetObjectID, err := bson.ObjectIDFromHex(studysetParam)
 
 	if err != nil {
 		panic(err)
@@ -154,7 +150,7 @@ func AddManyNgSetItem(c *gin.Context) {
 	var result models.NgSetSchema
 
 	var options = options.FindOneAndUpdate().SetReturnDocument(options.After)
-	var filter bson.D = bson.D{{"_id", _id}}
+	var filter bson.D = bson.D{{"_id", studySetObjectID}}
 
 	for _, e := range docs {
 		var update bson.D = bson.D{{"$push", bson.D{{"items", e}}}}
@@ -170,7 +166,7 @@ func AddManyNgSetItem(c *gin.Context) {
 
 func RemoveManyNgSetItem(c *gin.Context) {
 	var collection mongo.Collection = *models.NgSetCollection()
-	var ownerParam = c.Param("ownerParam")
+	var studysetParam = c.Param("studyset")
 
 	var docs []models.NgWordSchema
 
@@ -180,7 +176,7 @@ func RemoveManyNgSetItem(c *gin.Context) {
 		panic(err)
 	}
 
-	_id, err := bson.ObjectIDFromHex(ownerParam)
+	studySetObjectID, err := bson.ObjectIDFromHex(studysetParam)
 
 	if err != nil {
 		panic(err)
@@ -189,7 +185,7 @@ func RemoveManyNgSetItem(c *gin.Context) {
 	var result models.NgSetSchema
 
 	var options = options.FindOneAndUpdate().SetReturnDocument(options.After)
-	var filter bson.D = bson.D{{"_id", _id}}
+	var filter bson.D = bson.D{{"_id", studySetObjectID}}
 
 	for _, e := range docs {
 		var update bson.D = bson.D{{"$pull", bson.D{{"items", e}}}}
