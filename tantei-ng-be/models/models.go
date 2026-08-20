@@ -25,6 +25,12 @@ type StudysetSchema struct {
 	// UpdatedAt time.Time      `bson:"updatedAt,omitempty" json:"updatedAt,omitempty"`
 }
 
+type RadicalListSchema struct {
+	Id              bson.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
+	BaseRadical     string        `bson:"base_radical,omitempty" json:"base_radical,omitempty"`
+	RadicalVariants []string      `bson:"radical_variants,omitempty" json:"radical_variants,omitempty"`
+}
+
 type AccountSchema struct {
 	Id       bson.ObjectID `bson:"_id,omitempty" json:"_id,omitempty"`
 	Name     string        `bson:"name,omitempty" json:"name,omitempty"`
@@ -45,6 +51,13 @@ type TrackerSchema struct {
 	RemainingSets []bson.ObjectID    `bson:"remaining_sets,omitempty" json:"remaining_sets,omitempty"`
 	LastTime      time.Time          `bson:"last_time,omitempty" json:"last_time,omitempty"`
 	RefreshType   TrackerRefreshType `bson:"refresh_type,omitempty" json:"refresh_type,omitempty"`
+}
+
+func RadicalListCollection() *mongo.Collection {
+	dbClient := db.DbConnect()
+	collection := dbClient.Database("tantei").Collection("radical_lists")
+
+	return collection
 }
 
 func StudysetCollection() *mongo.Collection {

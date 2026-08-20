@@ -11,9 +11,9 @@ func NgSetRoutes(router *gin.Engine) {
 	router.GET("/studyset/:studyset", controllers.GetNgSet)
 	router.POST("/studyset", controllers.CreateNgSet)
 	router.PUT("/studyset/add/:studyset", controllers.AddNgSetItem)
-	router.PUT("/studyset/add_many/:studyset", controllers.AddManyNgSetItem)
+	router.PUT("/studyset/add_m/:studyset", controllers.AddNgSetItems)
 	router.PUT("/studyset/remove/:studyset", controllers.RemoveNgSetItem)
-	router.PUT("/studyset/remove_many/:studyset", controllers.RemoveManyNgSetItem)
+	router.PUT("/studyset/remove_m/:studyset", controllers.RemoveNgSetItems)
 
 	router.POST("/account/register", controllers.RegisterAccount)
 	router.POST("/account/login", controllers.LoginAccount)
@@ -23,4 +23,8 @@ func NgSetRoutes(router *gin.Engine) {
 	// param1: oid,
 	router.POST("/tracker/reset/:param1", controllers.ResetTracker)
 	router.POST("/tracker/refresh/:param1", controllers.RefreshCheckTracker)
+
+	router.GET("/radical_lists", controllers.GetRadicalLists)
+	router.POST("/radical_list", controllers.CreateRadicalList)
+	router.POST("/radical_list/add/:radical_list", controllers.AddItemsRadicalList)
 }

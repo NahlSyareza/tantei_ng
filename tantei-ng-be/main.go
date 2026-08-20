@@ -1,11 +1,13 @@
 package main
 
 import (
+	"log"
 	"os"
 	"tantei-ng/routes"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 // func CORSMiddleware() gin.HandlerFunc {
@@ -44,15 +46,11 @@ func main() {
 
 	// routes.WordRoutes(router)
 	routes.NgSetRoutes(router)
-	// router.POST("/books", createBook)
-	// router.GET("/books", getBooks)
-	// router.GET("/", getRoot)
-	// router.GET("/books/:id", getBookById)
 
-	// port := os.Getenv("PORT")
-	// if port == "" {
-	// 	port = "3000"
-	// }
+	err := godotenv.Load()
+	if err != nil {
+		log.Println("No .env file found!")
+	}
 
 	port := os.Getenv("PORT")
 	if port == "" {

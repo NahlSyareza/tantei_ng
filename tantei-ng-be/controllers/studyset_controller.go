@@ -128,7 +128,7 @@ func RemoveNgSetItem(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, result)
 }
 
-func AddManyNgSetItem(c *gin.Context) {
+func AddNgSetItems(c *gin.Context) {
 	var collection mongo.Collection = *models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
 
@@ -163,7 +163,7 @@ func AddManyNgSetItem(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, result)
 }
 
-func RemoveManyNgSetItem(c *gin.Context) {
+func RemoveNgSetItems(c *gin.Context) {
 	var collection mongo.Collection = *models.StudysetCollection()
 	var studysetParam = c.Param("studyset")
 
