@@ -28,11 +28,11 @@ func CORSMiddleware() gin.HandlerFunc {
 func main() {
 	var router *gin.Engine = gin.Default()
 
-	router.Use(CORSMiddleware())
+	// router.Use(CORSMiddleware())
 
 	router.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "Welcome to Backpoint Partners!",
+			"message": "Welcome to Tantei Ng Backend!",
 		})
 	})
 
@@ -45,5 +45,5 @@ func main() {
 
 	fmt.Println("Running a new Backpoint Partners instance!")
 
-	router.Run("localhost:28080")
+	router.Run(":3000")
 }
