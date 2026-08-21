@@ -3,6 +3,7 @@ package controllers
 import (
 	"context"
 	"net/http"
+	"slices"
 	"tantei-ng/models"
 
 	"github.com/gin-gonic/gin"
@@ -65,6 +66,18 @@ func CreateNgSet(c *gin.Context) {
 	var doc models.StudysetSchema
 
 	var err = c.BindJSON(&doc)
+
+	var detectedRadicals []string
+
+	if len(doc.Items) > 0 {
+		for _, value := range doc.Items {
+			if !slices.Contains(detectedRadicals, value.Radical) {
+				detectedRadicals = append(detectedRadicals, value.Radical)
+			}
+		}
+	}
+
+	doc.IndexedRadicals = detectedRadicals
 
 	if err != nil {
 		panic(err)

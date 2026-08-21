@@ -9,19 +9,20 @@ import (
 )
 
 type StudywordSchema struct {
-	Kanji      string `bson:"kanji" json:"kanji"`
-	Radical    string `bson:"radical" json:"radical"`
-	Furigana   string `bson:"furigana" json:"furigana"`
-	Latin      string `bson:"latin" json:"latin"`
-	English    string `bson:"english" json:"english"`
+	Kanji    string `bson:"kanji" json:"kanji"`
+	Radical  string `bson:"radical" json:"radical"`
+	Furigana string `bson:"furigana" json:"furigana"`
+	Latin    string `bson:"latin" json:"latin"`
+	English  string `bson:"english" json:"english"`
 	// Indonesian string `bson:"indonesian" json:"indonesian"`
 }
 
 type StudysetSchema struct {
-	Id    bson.ObjectID     `bson:"_id,omitempty" json:"_id,omitempty"`
-	Owner bson.ObjectID     `bson:"owner" json:"owner"`
-	Name  string            `bson:"name" json:"name"`
-	Items []StudywordSchema `bson:"items,omitempty" json:"items,omitempty"`
+	Id              bson.ObjectID     `bson:"_id,omitempty" json:"_id,omitempty"`
+	Owner           bson.ObjectID     `bson:"owner" json:"owner"`
+	Name            string            `bson:"name" json:"name"`
+	Items           []StudywordSchema `bson:"items,omitempty" json:"items,omitempty"`
+	IndexedRadicals []string          `bson:"indexed_radicals,omitempty" json:"indexed_radicals,omitempty"`
 	// CreatedAt time.Time      `bson:"createdAt,omitempty" json:"createdAt,omitempty"`
 	// UpdatedAt time.Time      `bson:"updatedAt,omitempty" json:"updatedAt,omitempty"`
 }
