@@ -9,11 +9,11 @@ import (
 )
 
 type StudywordSchema struct {
-	Kanji    string `bson:"kanji" json:"kanji"`
-	Radical  string `bson:"radical" json:"radical"`
-	Furigana string `bson:"furigana" json:"furigana"`
-	Latin    string `bson:"latin" json:"latin"`
-	English  string `bson:"english" json:"english"`
+	Kanji    string   `bson:"kanji" json:"kanji"`
+	Radical  []string `bson:"radical" json:"radical"`
+	Furigana string   `bson:"furigana" json:"furigana"`
+	Latin    string   `bson:"latin" json:"latin"`
+	English  string   `bson:"english" json:"english"`
 	// Indonesian string `bson:"indonesian" json:"indonesian"`
 }
 

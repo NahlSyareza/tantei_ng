@@ -1,11 +1,11 @@
 import type { PageLoad } from './$types';
-import axios from 'axios';
+import { api } from '../../../aux/route';
 
 export const load: PageLoad = async ({ params }) => {
 	const id = params.id;
 
 	try {
-		const res = await axios.get(`http://localhost:28080/ng_set/${id}`);
+		const res = await api.get(`/studyset/${id}`);
 
 		// console.log(res.data);
 

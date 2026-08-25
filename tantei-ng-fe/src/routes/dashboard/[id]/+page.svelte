@@ -1,36 +1,21 @@
 <script lang="ts">
 	import play_button from '$lib/assets/play_button.png';
 	import edit_button from '$lib/assets/edit_button.png';
-	import axios from 'axios';
-
-	interface NgSetItem {
-		kanji: string;
-		furigana: string;
-		latin: string;
-		english: string;
-		indonesian: string;
-	}
-
-	interface NgSet {
-		// _id: string;
-		name: string;
-		// createdAt: string;
-		// updatedAt: string;
-		items: NgSetItem[];
-	}
+	import { api } from '../../../aux/route';
+	import { type Studyword, type Studyset } from '../../../aux/data_interfaces';
 
 	let {
 		data
 	}: {
 		data: {
 			id: string;
-			o: NgSet;
-			c: NgSet;
+			o: Studyset;
+			c: Studyset;
 		};
 	} = $props();
 	// let dataCopy: NgSetItem[] = [...data.o];
-	let selectedQuestion = $state<NgSetItem | null>(null);
-	let availableAnswers: NgSetItem[] = $state([]);
+	let selectedQuestion = $state<Studyword | null>(null);
+	let availableAnswers: Studyword[] = $state([]);
 	let hasStarted: boolean = $state(false);
 	let remainingCounter: number = $state(0);
 
@@ -52,7 +37,7 @@
 				owner_id: '6a74bac987651dbbb3c2e71f'
 			};
 
-			const res = await axios.post(`http://localhost:28080/tracker/remove_item`, payload);
+			const res = await api.post(`/tracker/remove_item`, payload);
 
 			console.log(payload);
 			console.log(res.data);
@@ -112,7 +97,7 @@
 		// console.log(`${answer}`);
 	}
 
-	function getStyle(item: NgSetItem) {
+	function getStyle(item: Studyword) {
 		let someBool: boolean = false;
 
 		if (someBool) {
@@ -128,13 +113,9 @@
 
 	let questionDisplayType = 'english';
 
-	function getQuestionDisplayType(item: NgSetItem) {
+	function getQuestionDisplayType(item: Studyword) {
 		if (questionDisplayType == 'furigana') {
 			return item.furigana;
-		}
-
-		if (questionDisplayType == 'indonesian') {
-			return item.indonesian;
 		}
 
 		if (questionDisplayType == 'kanji') {
@@ -146,13 +127,9 @@
 
 	let answerDisplayType = 'kanji';
 
-	function getAnswerDisplayType(item: NgSetItem) {
+	function getAnswerDisplayType(item: Studyword) {
 		if (answerDisplayType == 'furigana') {
 			return item.furigana;
-		}
-
-		if (answerDisplayType == 'indonesian') {
-			return item.indonesian;
 		}
 
 		if (answerDisplayType == 'kanji') {
@@ -191,8 +168,9 @@
 			</div>
 		</div>
 	{:else}
-		<p>{remainingCounter} / {data.o.items.length}</p>
-		<div class="flex-1"></div>
+		<div class="flex-1">
+			<p>{remainingCounter} / {data.o.items.length}</p>
+		</div>
 		<div class="flex flex-3 flex-col">
 			<div class="m-4 flex flex-1">
 				<div class="flex flex-1 items-center justify-center rounded-xl bg-[#D5CEBE]">

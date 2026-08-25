@@ -1,45 +1,40 @@
 <script lang="ts">
-	import axios from 'axios';
+	import { api } from '../../../aux/route';
+	import {type Studyword} from '../../../aux/data_interfaces'
 
-	interface NgSetItem {
-		kanji: string;
-		furigana: string;
-		latin: string;
-		english: string;
-		indonesian: string;
-	}
-
-	let ngSetName = $state('');
-	let ngSetItems = $state<NgSetItem[]>([
+	let studysetName = $state('');
+	let studysetItems = $state<Studyword[]>([
 		{ kanji: '', furigana: '', latin: '', english: '', indonesian: '' }
 	]);
 
 	function handleAddNgItem() {
-		ngSetItems.push({ kanji: '', furigana: '', latin: '', english: '', indonesian: '' });
+		studysetItems.push({ kanji: '', furigana: '', latin: '', english: '', indonesian: '' });
 	}
 
 	function handleRemoveNgItem() {
-		if (ngSetItems.length > 1) {
-			ngSetItems.pop();
+		if (studysetItems.length > 1) {
+			studysetItems.pop();
 		}
 	}
 
 	function testPrintToConsole() {
 		console.log(
 			JSON.stringify({
-				name: ngSetName,
-				items: ngSetItems
+				name: studysetName,
+				items: studysetItems
 			})
 		);
 	}
 
 	async function trySaveDB() {
 		try {
-			const res = await axios.post(
-				'http://localhost:28080/ng_set',
+			const res = await api.post(
+				'/studyset',
 				{
-					name: ngSetName,
-					items: ngSetItems
+					name: studysetName,
+					items: studysetItems,
+					// Stil hardcoded, not good
+					owner: "6a74bac987651dbbb3c2e71f"
 				},
 				{
 					headers: {
@@ -58,11 +53,11 @@
 <div class="flex flex-1 flex-col">
 	<div>
 		<p>New Set Name</p>
-		<input type="text" bind:value={ngSetName} placeholder="Insert name" />
+		<input type="text" bind:value={studysetName} placeholder="Insert name" />
 	</div>
 	<div class="space-y-2">
 		<p>Items</p>
-		{#each ngSetItems as item}
+		{#each studysetItems as item, index (index)}
 			<div>
 				<input type="text" placeholder="Kanji" bind:value={item.kanji} />
 				<input type="text" placeholder="Furigana" bind:value={item.furigana} />
@@ -76,10 +71,10 @@
 	</div>
 	<div>
 		<p>Created set will be:</p>
-		<p>{ngSetName}</p>
+		<p>{studysetName}</p>
 		<!-- <p>{arrayOStrings}</p> -->
 		<div class="space-y-2">
-			{#each ngSetItems as item}
+			{#each studysetItems as item, index (index)}
 				<div>
 					<p>{item.kanji}</p>
 					<p>{item.furigana}</p>

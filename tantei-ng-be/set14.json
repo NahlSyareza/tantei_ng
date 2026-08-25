@@ -1,0 +1,221 @@
+[{
+  "_id": {
+    "$oid": "6a61ca02ce246fdcc2ffa208"
+  },
+  "name": "Set 14",
+  "items": [
+    {
+      "kanji": "営業中",
+      "furigana": "えいぎょうちゅう",
+      "latin": "eigyou-chuu",
+      "english": "Open for business",
+      "indonesian": "Buka (sedang beroperasi)"
+    },
+    {
+      "kanji": "準備中",
+      "furigana": "じゅんびちゅう",
+      "latin": "junbi-chuu",
+      "english": "Preparing (Closed)",
+      "indonesian": "Sedang bersiap (Tutup)"
+    },
+    {
+      "kanji": "案内所",
+      "furigana": "あんないじょ",
+      "latin": "annai-jo",
+      "english": "Information desk",
+      "indonesian": "Meja informasi / Pusat informasi"
+    },
+    {
+      "kanji": "注意",
+      "furigana": "ちゅうい",
+      "latin": "chuui",
+      "english": "Caution / Warning",
+      "indonesian": "Peringatan / Hati-hati"
+    },
+    {
+      "kanji": "危険",
+      "furigana": "きけん",
+      "latin": "kiken",
+      "english": "Danger",
+      "indonesian": "Bahaya"
+    },
+    {
+      "kanji": "非常口",
+      "furigana": "ひじょうぐち",
+      "latin": "hijou-guchi",
+      "english": "Emergency exit",
+      "indonesian": "Pintu keluar darurat"
+    },
+    {
+      "kanji": "改札",
+      "furigana": "かいさつ",
+      "latin": "kaisatsu",
+      "english": "Ticket gate",
+      "indonesian": "Pintu pemeriksaan tiket / Gerbang tiket"
+    },
+    {
+      "kanji": "受付",
+      "furigana": "うけつけ",
+      "latin": "uketsuke",
+      "english": "Reception",
+      "indonesian": "Resepsionis / Tempat penerimaan tamu"
+    },
+    {
+      "kanji": "料金",
+      "furigana": "りょうきん",
+      "latin": "ryoukin",
+      "english": "Fee / Charge",
+      "indonesian": "Biaya / Tarif"
+    },
+    {
+      "kanji": "窓口",
+      "furigana": "まどぐch",
+      "latin": "madoguchi",
+      "english": "Service counter",
+      "indonesian": "Loket pelayanan"
+    },
+    {
+      "kanji": "自動",
+      "furigana": "じどう",
+      "latin": "jidou",
+      "english": "Automatic",
+      "indonesian": "Otomatis"
+    },
+    {
+      "kanji": "切符",
+      "furigana": "きっぷ",
+      "latin": "kippu",
+      "english": "Ticket",
+      "indonesian": "Tiket"
+    },
+    {
+      "kanji": "階段",
+      "furigana": "かいだん",
+      "latin": "kaidan",
+      "english": "Stairs",
+      "indonesian": "Tangga"
+    },
+    {
+      "kanji": "喫煙所",
+      "furigana": "きつえんじょ",
+      "latin": "kitsuen-jo",
+      "english": "Smoking area",
+      "indonesian": "Area merokok"
+    },
+    {
+      "kanji": "禁煙",
+      "furigana": "きんえん",
+      "latin": "kin'en",
+      "english": "No smoking",
+      "indonesian": "Dilarang merokok"
+    },
+    {
+      "kanji": "満席",
+      "furigana": "まんせき",
+      "latin": "manseki",
+      "english": "Full / No seats",
+      "indonesian": "Penuh / Tempat duduk habis"
+    },
+    {
+      "kanji": "停止",
+      "furigana": "ていし",
+      "latin": "teishi",
+      "english": "Stop / Suspension",
+      "indonesian": "Berhenti / Penghentian"
+    },
+    {
+      "kanji": "失敗",
+      "furigana": "しっぱい",
+      "latin": "shippai",
+      "english": "Failure",
+      "indonesian": "Kegagalan"
+    },
+    {
+      "kanji": "実行",
+      "furigana": "じっこう",
+      "latin": "jikkou",
+      "english": "Execute / Run",
+      "indonesian": "Eksekusi / Jalankan"
+    },
+    {
+      "kanji": "接続",
+      "furigana": "せつぞく",
+      "latin": "setsuzoku",
+      "english": "Connection",
+      "indonesian": "Koneksi / Sambungan"
+    },
+    {
+      "kanji": "成功",
+      "furigana": "せいこう",
+      "latin": "seikou",
+      "english": "Success",
+      "indonesian": "Keberhasilan / Sukses"
+    },
+    {
+      "kanji": "設定",
+      "furigana": "せってい",
+      "latin": "settei",
+      "english": "Settings",
+      "indonesian": "Pengaturan"
+    },
+    {
+      "kanji": "同期",
+      "furigana": "どうき",
+      "latin": "douki",
+      "english": "Sync / Synchronization",
+      "indonesian": "Sinkronisasi"
+    },
+    {
+      "kanji": "検索",
+      "furigana": "けんさく",
+      "latin": "kensaku",
+      "english": "Search",
+      "indonesian": "Pencarian / Cari"
+    },
+    {
+      "kanji": "構築",
+      "furigana": "こうちく",
+      "latin": "kouchiku",
+      "english": "Build / Construct",
+      "indonesian": "Membangun / Konstruksi"
+    },
+    {
+      "kanji": "機能",
+      "furigana": "きのう",
+      "latin": "kinou",
+      "english": "Function / Feature",
+      "indonesian": "Fungsi / Fitur"
+    },
+    {
+      "kanji": "更新",
+      "furigana": "こうしん",
+      "latin": "koushin",
+      "english": "Update",
+      "indonesian": "Pembaruan / Perbarui"
+    },
+    {
+      "kanji": "処理",
+      "furigana": "しょり",
+      "latin": "shori",
+      "english": "Process / Processing",
+      "indonesian": "Proses / Pemrosesan"
+    },
+    {
+      "kanji": "画面",
+      "furigana": "がめん",
+      "latin": "gamen",
+      "english": "Screen",
+      "indonesian": "Layar"
+    },
+    {
+      "kanji": "端末",
+      "furigana": "たんまつ",
+      "latin": "tanmatsu",
+      "english": "Terminal / Device",
+      "indonesian": "Perangkat / Terminal"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+}]

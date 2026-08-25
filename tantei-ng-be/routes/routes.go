@@ -14,6 +14,8 @@ func NgSetRoutes(router *gin.Engine) {
 	// router.PUT("/studyset/add_m/:studyset", controllers.AddNgSetItems)
 	router.PUT("/studyset/remove/:studyset", controllers.RemoveNgSetItems)
 	// router.PUT("/studyset/remove_m/:studyset", controllers.RemoveNgSetItems)
+	router.GET("/studyset/try_index/:studyset", controllers.TryIndexingRadicalsStudyset)
+	router.GET("/studyset/unique_cumulative/owned/:owner", controllers.GetCumulativeRadicalsFromOwnedStudyset)
 
 	router.POST("/account/register", controllers.RegisterAccount)
 	router.POST("/account/login", controllers.LoginAccount)

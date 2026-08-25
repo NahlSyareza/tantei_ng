@@ -1,6 +1,4 @@
 <script lang="ts">
-	import axios from 'axios';
-	import type { PageProps } from './$types';
 	import { resolve } from '$app/paths';
 
 	interface NgSet {
@@ -11,18 +9,6 @@
 	}
 
 	let { data }: { data: { res: NgSet[] } } = $props();
-
-	let sampleReading = [
-		{
-			name: 'R1'
-		},
-		{
-			name: 'R2'
-		},
-		{
-			name: 'R3'
-		}
-	];
 
 	let samplePatternRecognition = [
 		{
@@ -38,35 +24,19 @@
 			name: 'PR4'
 		}
 	];
-
-	// let data = $state(null);
-	//
-	// $effect(() => {
-	// axios.get('http://localhost:28080/ng_sets').then((res) => (data = res.data));
-	// console.log(data);
-	//
-	// return () => {};
-	// });
-
-	// export let data;
 </script>
 
 <div class="flex flex-1 flex-col p-6">
 	<p class="text-2xl font-semibold">Reading</p>
 	<div class="mt-8 flex flex-wrap gap-5">
-		{#each data.res as { name, _id }}
+		{#each data.res as { name, _id}, index (index)}
 			<a
-				href={`/dashboard/${_id}`}
+				href={resolve(`/dashboard/${_id}`)}
 				class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#D5CEBE]"
 			>
 				<p class="text-2xl font-semibold">{name}</p>
 			</a>
 		{/each}
-		<!-- {#each sampleReading as { name } (name)}
-			<div class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#D5CEBE]">
-				<p class="text-2xl font-semibold">{name}</p>
-			</div>
-		{/each} -->
 		<a
 			href={resolve('/dashboard/create_new_set')}
 			class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#E6E3D1]"

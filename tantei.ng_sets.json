@@ -1,0 +1,3193 @@
+[{
+  "_id": {
+    "$oid": "6a57cf6dad6fe2060736cec2"
+  },
+  "name": "Set 1",
+  "items": [
+    {
+      "kanji": "シャツ",
+      "furigana": "シャツ",
+      "latin": "shatsu",
+      "english": "shirt",
+      "indonesian": "baju"
+    },
+    {
+      "kanji": "食べ物",
+      "furigana": "たべもの",
+      "latin": "tabemono",
+      "english": "food",
+      "indonesian": "makanan"
+    },
+    {
+      "kanji": "車",
+      "furigana": "くるま",
+      "latin": "kuruma",
+      "english": "car",
+      "indonesian": "mobil"
+    },
+    {
+      "kanji": "肉",
+      "furigana": "にく",
+      "latin": "niku",
+      "english": "meat",
+      "indonesian": "daging"
+    },
+    {
+      "kanji": "自転車",
+      "furigana": "じてんしゃ",
+      "latin": "jitensha",
+      "english": "bicycle",
+      "indonesian": "sepeda"
+    },
+    {
+      "kanji": "新聞",
+      "furigana": "しんぶん",
+      "latin": "shinbun",
+      "english": "newspaper",
+      "indonesian": "koran"
+    },
+    {
+      "kanji": "警察",
+      "furigana": "けいさつ",
+      "latin": "keisatsu",
+      "english": "police",
+      "indonesian": "polisi"
+    },
+    {
+      "kanji": "事件",
+      "furigana": "じけん",
+      "latin": "jiken",
+      "english": "incident",
+      "indonesian": "insiden"
+    },
+    {
+      "kanji": "煙草",
+      "furigana": "タバコ",
+      "latin": "tabako",
+      "english": "cigarette",
+      "indonesian": "rokok"
+    },
+    {
+      "kanji": "猫",
+      "furigana": "ねこ",
+      "latin": "neko",
+      "english": "cat",
+      "indonesian": "kucing"
+    },
+    {
+      "kanji": "熊",
+      "furigana": "くま",
+      "latin": "kuma",
+      "english": "bear",
+      "indonesian": "beruang"
+    },
+    {
+      "kanji": "飲み物",
+      "furigana": "のみもの",
+      "latin": "nomimono",
+      "english": "drink",
+      "indonesian": "minuman"
+    },
+    {
+      "kanji": "果物",
+      "furigana": "くだもの",
+      "latin": "kudamono",
+      "english": "fruits",
+      "indonesian": "buah-buahan"
+    },
+    {
+      "kanji": "メガネ",
+      "furigana": "メガネ",
+      "latin": "megane",
+      "english": "glasses",
+      "indonesian": "kacamata"
+    },
+    {
+      "kanji": "電車",
+      "furigana": "でんしゃ",
+      "latin": "densha",
+      "english": "train",
+      "indonesian": "kereta"
+    },
+    {
+      "kanji": "朝",
+      "furigana": "あさ",
+      "latin": "asa",
+      "english": "morning",
+      "indonesian": "pagi"
+    },
+    {
+      "kanji": "晩",
+      "furigana": "ばん",
+      "latin": "ban",
+      "english": "evening",
+      "indonesian": "malam"
+    },
+    {
+      "kanji": "探偵",
+      "furigana": "たんてい",
+      "latin": "tantei",
+      "english": "detective",
+      "indonesian": "detektif"
+    },
+    {
+      "kanji": "日本",
+      "furigana": "にほん",
+      "latin": "nihon",
+      "english": "Japan",
+      "indonesian": "jepang"
+    },
+    {
+      "kanji": "鉛筆",
+      "furigana": "えんぴつ",
+      "latin": "enpitsu",
+      "english": "pencil",
+      "indonesian": "pensil"
+    },
+    {
+      "kanji": "ボールペン",
+      "furigana": "ボールペン",
+      "latin": "borupen",
+      "english": "pen",
+      "indonesian": "pulpen"
+    },
+    {
+      "kanji": "教室",
+      "furigana": "きょうしつ",
+      "latin": "kyoushitsu",
+      "english": "classroom",
+      "indonesian": "ruang kelas"
+    },
+    {
+      "kanji": "財布",
+      "furigana": "さいふ",
+      "latin": "saifu",
+      "english": "wallet",
+      "indonesian": "dompet"
+    },
+    {
+      "kanji": "オートバイ",
+      "furigana": "オ-トバイ",
+      "latin": "ootobai",
+      "english": "motorcycle",
+      "indonesian": "motor"
+    },
+    {
+      "kanji": "野菜",
+      "furigana": "やさい",
+      "latin": "yasai",
+      "english": "vegetables",
+      "indonesian": "sayuran"
+    },
+    {
+      "kanji": "勉強する",
+      "furigana": "べんきょうする",
+      "latin": "benkyousuru",
+      "english": "to study",
+      "indonesian": "belajar"
+    },
+    {
+      "kanji": "聞く",
+      "furigana": "きく",
+      "latin": "kiku",
+      "english": "to listen",
+      "indonesian": "mendengar"
+    },
+    {
+      "kanji": "書く",
+      "furigana": "かく",
+      "latin": "kaku",
+      "english": "to write",
+      "indonesian": "menulis"
+    },
+    {
+      "kanji": "見る",
+      "furigana": "みる",
+      "latin": "miru",
+      "english": "to see",
+      "indonesian": "melihat"
+    },
+    {
+      "kanji": "掛ける",
+      "furigana": "でんわをかける",
+      "latin": "denwa o kakeru",
+      "english": "to make a phone call",
+      "indonesian": "menelpon"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a57cf83ad6fe2060736cec7"
+  },
+  "name": "Set 2",
+  "items": [
+    {
+      "kanji": "話す",
+      "furigana": "はなす",
+      "latin": "hanasu",
+      "english": "to speak",
+      "indonesian": "berbicara"
+    },
+    {
+      "kanji": "買う",
+      "furigana": "かう",
+      "latin": "kau",
+      "english": "to buy",
+      "indonesian": "membeli"
+    },
+    {
+      "kanji": "散歩する\n",
+      "furigana": "さんぽする",
+      "latin": "sanposuru",
+      "english": "to take a walk",
+      "indonesian": "jalan-jalan"
+    },
+    {
+      "kanji": "買い物する",
+      "furigana": "かいものする",
+      "latin": "kaimonosuru",
+      "english": "to shop",
+      "indonesian": "berbelanja"
+    },
+    {
+      "kanji": "会う",
+      "furigana": "あう",
+      "latin": "au",
+      "english": "to meet",
+      "indonesian": "bertemu"
+    },
+    {
+      "kanji": "分かる",
+      "furigana": "わかる",
+      "latin": "wakaru",
+      "english": "to understand",
+      "indonesian": "mengerti"
+    },
+    {
+      "kanji": "忘れる",
+      "furigana": "わすれる",
+      "latin": "wasureru",
+      "english": "to forget",
+      "indonesian": "lupa"
+    },
+    {
+      "kanji": "借りる",
+      "furigana": "かりる",
+      "latin": "kariru",
+      "english": "to borrow",
+      "indonesian": "meminjam"
+    },
+    {
+      "kanji": "覚える",
+      "furigana": "おぼえる",
+      "latin": "oboeru",
+      "english": "to remember",
+      "indonesian": "mengingat"
+    },
+    {
+      "kanji": "考える",
+      "furigana": "かんがえる",
+      "latin": "kangaeru",
+      "english": "to think",
+      "indonesian": "berpikir"
+    },
+    {
+      "kanji": "歌う",
+      "furigana": "うたう",
+      "latin": "utau",
+      "english": "to sing",
+      "indonesian": "menyanyi"
+    },
+    {
+      "kanji": "働く",
+      "furigana": "はたらく",
+      "latin": "hataraku",
+      "english": "to work",
+      "indonesian": "bekerja"
+    },
+    {
+      "kanji": "休む",
+      "furigana": "やすむ",
+      "latin": "yasumu",
+      "english": "to rest",
+      "indonesian": "istirahat"
+    },
+    {
+      "kanji": "読む",
+      "furigana": "よむ",
+      "latin": "yomu",
+      "english": "to read",
+      "indonesian": "membaca"
+    },
+    {
+      "kanji": "洗う",
+      "furigana": "あらう",
+      "latin": "arau",
+      "english": "to wash (non-clothing)",
+      "indonesian": "menyuci (bukan pakaian)"
+    },
+    {
+      "kanji": "遣る",
+      "furigana": "やる",
+      "latin": "yaru",
+      "english": "to do",
+      "indonesian": "melakukan"
+    },
+    {
+      "kanji": "歩く",
+      "furigana": "あるく",
+      "latin": "aruku",
+      "english": "to walk",
+      "indonesian": "berjalan"
+    },
+    {
+      "kanji": "洗濯する",
+      "furigana": "せんたくする",
+      "latin": "sentakusuru",
+      "english": "to do laundry",
+      "indonesian": "menyuci (pakaian)"
+    },
+    {
+      "kanji": "お祈りする",
+      "furigana": "おいのりする",
+      "latin": "oinori",
+      "english": "to pray",
+      "indonesian": "berdoa"
+    },
+    {
+      "kanji": "シャワーを浴びる",
+      "furigana": "シャワーをあびる",
+      "latin": "shawa o abiru",
+      "english": "to take a shower",
+      "indonesian": "mandi"
+    },
+    {
+      "kanji": "食べる",
+      "furigana": "たべる",
+      "latin": "taberu",
+      "english": "to eat",
+      "indonesian": "makan"
+    },
+    {
+      "kanji": "飲む",
+      "furigana": "のむ",
+      "latin": "nomu",
+      "english": "to drink",
+      "indonesian": "minum"
+    },
+    {
+      "kanji": "行く",
+      "furigana": "いく",
+      "latin": "iku",
+      "english": "to go",
+      "indonesian": "pergi"
+    },
+    {
+      "kanji": "帰る",
+      "furigana": "かえる",
+      "latin": "kaeru",
+      "english": "to return home",
+      "indonesian": "pulang"
+    },
+    {
+      "kanji": "起きる",
+      "furigana": "おきる",
+      "latin": "okiru",
+      "english": "to wake up",
+      "indonesian": "bangun"
+    },
+    {
+      "kanji": "寝る",
+      "furigana": "ねる",
+      "latin": "neru",
+      "english": "to sleep",
+      "indonesian": "tidur"
+    },
+    {
+      "kanji": "スーパー",
+      "furigana": "スーパー",
+      "latin": "suupaa",
+      "english": "supermarket",
+      "indonesian": "pasar"
+    },
+    {
+      "kanji": "公園",
+      "furigana": "こうえん",
+      "latin": "koen",
+      "english": "park",
+      "indonesian": "taman"
+    },
+    {
+      "kanji": "レストラン",
+      "furigana": "レストラン",
+      "latin": "resutoran",
+      "english": "restaurant",
+      "indonesian": "restoran"
+    },
+    {
+      "kanji": "お早うございます",
+      "furigana": "おはようございます",
+      "latin": "ohayou gozaimasu",
+      "english": "good morning",
+      "indonesian": "selamat pagi"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a57cfd1ad6fe2060736cecd"
+  },
+  "name": "Set 3",
+  "items": [
+    {
+      "kanji": "昼ご飯",
+      "furigana": "ひるごはん",
+      "latin": "hiru gohan",
+      "english": "lunch",
+      "indonesian": "makan siang"
+    },
+    {
+      "kanji": "朝ご飯",
+      "furigana": "あさごはん",
+      "latin": "asa gohan",
+      "english": "breakfast",
+      "indonesian": "makan pagi"
+    },
+    {
+      "kanji": "晩ご飯",
+      "furigana": "ばんごはん",
+      "latin": "ban gohan",
+      "english": "dinner",
+      "indonesian": "makan malam"
+    },
+    {
+      "kanji": "昼",
+      "furigana": "ひる",
+      "latin": "hiru",
+      "english": "noon",
+      "indonesian": "siang"
+    },
+    {
+      "kanji": "牛肉",
+      "furigana": "ぎゅうにく",
+      "latin": "gyuuniku",
+      "english": "beef",
+      "indonesian": "daging sapi"
+    },
+    {
+      "kanji": "鶏肉",
+      "furigana": "とりにく",
+      "latin": "toriniku",
+      "english": "chicken meat",
+      "indonesian": "daging ayam"
+    },
+    {
+      "kanji": "牛乳",
+      "furigana": "ぎゅうにゅう",
+      "latin": "gyunyuu",
+      "english": "milk",
+      "indonesian": "susu"
+    },
+    {
+      "kanji": "豚肉",
+      "furigana": "ぶたにく",
+      "latin": "butaniku",
+      "english": "pork",
+      "indonesian": "daging babi"
+    },
+    {
+      "kanji": "お茶",
+      "furigana": "おちゃ",
+      "latin": "ocha",
+      "english": "green tea",
+      "indonesian": "teh hijau"
+    },
+    {
+      "kanji": "粉茶",
+      "furigana": "こちゃ",
+      "latin": "kocha",
+      "english": "black tea",
+      "indonesian": "teh"
+    },
+    {
+      "kanji": "水",
+      "furigana": "みず",
+      "latin": "mizu",
+      "english": "water",
+      "indonesian": "air"
+    },
+    {
+      "kanji": "電話",
+      "furigana": "でんわ",
+      "latin": "denwa",
+      "english": "telephone",
+      "indonesian": "telefon"
+    },
+    {
+      "kanji": "タクシー",
+      "furigana": "タクシー",
+      "latin": "takushi",
+      "english": "taxi",
+      "indonesian": "taxi"
+    },
+    {
+      "kanji": "部屋",
+      "furigana": "へや",
+      "latin": "heya",
+      "english": "room",
+      "indonesian": "kamar"
+    },
+    {
+      "kanji": "トイレ",
+      "furigana": "トイレ",
+      "latin": "toire",
+      "english": "toilet",
+      "indonesian": "toilet"
+    },
+    {
+      "kanji": "けたいでんわ",
+      "furigana": "けたいでんわ",
+      "latin": "ketai denwa",
+      "english": "mobile phone",
+      "indonesian": "HP"
+    },
+    {
+      "kanji": "バス",
+      "furigana": "バス",
+      "latin": "basu",
+      "english": "bus",
+      "indonesian": "bus"
+    },
+    {
+      "kanji": "眠い",
+      "furigana": "ねむい",
+      "latin": "nemui",
+      "english": "sleepy",
+      "indonesian": "mengantuk"
+    },
+    {
+      "kanji": "いい",
+      "furigana": "いい",
+      "latin": "ii",
+      "english": "good",
+      "indonesian": "bagus"
+    },
+    {
+      "kanji": "家",
+      "furigana": "うち",
+      "latin": "uchi",
+      "english": "house",
+      "indonesian": "rumah"
+    },
+    {
+      "kanji": "悪い",
+      "furigana": "わるい",
+      "latin": "warui",
+      "english": "bad",
+      "indonesian": "jelek"
+    },
+    {
+      "kanji": "可愛",
+      "furigana": "かわい",
+      "latin": "kawai",
+      "english": "cute",
+      "indonesian": "cantik"
+    },
+    {
+      "kanji": "ハンサム",
+      "furigana": "ハンサム",
+      "latin": "hansamu",
+      "english": "handsome",
+      "indonesian": "tampan"
+    },
+    {
+      "kanji": "親切",
+      "furigana": "しんせつな",
+      "latin": "shinsetsuna",
+      "english": "kind",
+      "indonesian": "ramah"
+    },
+    {
+      "kanji": "元気",
+      "furigana": "げんき",
+      "latin": "genki",
+      "english": "healthy",
+      "indonesian": "sehat"
+    },
+    {
+      "kanji": "家族",
+      "furigana": "かぞく",
+      "latin": "kazoku",
+      "english": "family",
+      "indonesian": "keluarga"
+    },
+    {
+      "kanji": "お母さん",
+      "furigana": "おかあさん",
+      "latin": "okaasan",
+      "english": "mother",
+      "indonesian": "ibu"
+    },
+    {
+      "kanji": "お姉さん",
+      "furigana": "おねえさん",
+      "latin": "oneesan",
+      "english": "older sister",
+      "indonesian": "kakak perempuan"
+    },
+    {
+      "kanji": "弟さん",
+      "furigana": "おとうとさん",
+      "latin": "otoutosan",
+      "english": "younger brother",
+      "indonesian": "adik laki-laki"
+    },
+    {
+      "kanji": "お父さん",
+      "furigana": "おとうさん",
+      "latin": "otousan",
+      "english": "father",
+      "indonesian": "ayah"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a57cfe0ad6fe2060736ced2"
+  },
+  "name": "Set 4",
+  "items": [
+    {
+      "kanji": "妹さん",
+      "furigana": "いもうとさん",
+      "latin": "imoutosan",
+      "english": "younger sister",
+      "indonesian": "adik perempuan"
+    },
+    {
+      "kanji": "お兄さん",
+      "furigana": "おにいさん",
+      "latin": "oniisan",
+      "english": "older brother",
+      "indonesian": "kakak laki-laki"
+    },
+    {
+      "kanji": "辞書",
+      "furigana": "じしょ",
+      "latin": "jisho",
+      "english": "dictionary",
+      "indonesian": "kamus"
+    },
+    {
+      "kanji": "雑誌",
+      "furigana": "ざっし",
+      "latin": "zasshi",
+      "english": "magazine",
+      "indonesian": "majalah"
+    },
+    {
+      "kanji": "本",
+      "furigana": "ほん",
+      "latin": "hon",
+      "english": "buku",
+      "indonesian": "buku"
+    },
+    {
+      "kanji": "箱",
+      "furigana": "はこ",
+      "latin": "hako",
+      "english": "box",
+      "indonesian": "kotak"
+    },
+    {
+      "kanji": "鞄",
+      "furigana": "かばん",
+      "latin": "kaban",
+      "english": "bag",
+      "indonesian": "tas"
+    },
+    {
+      "kanji": "鍵",
+      "furigana": "かぎ",
+      "latin": "kagi",
+      "english": "key",
+      "indonesian": "kunci"
+    },
+    {
+      "kanji": "ノート",
+      "furigana": "ノート",
+      "latin": "nooto",
+      "english": "notebook",
+      "indonesian": "catatan"
+    },
+    {
+      "kanji": "紙",
+      "furigana": "かみ",
+      "latin": "kami",
+      "english": "paper",
+      "indonesian": "kertas"
+    },
+    {
+      "kanji": "燐寸",
+      "furigana": "マッチ",
+      "latin": "macchi",
+      "english": "matchstick",
+      "indonesian": "korek api kayu"
+    },
+    {
+      "kanji": "灰皿",
+      "furigana": "はいざら",
+      "latin": "haizara",
+      "english": "ashtray",
+      "indonesian": "asbak"
+    },
+    {
+      "kanji": "ライター",
+      "furigana": "ライター",
+      "latin": "raitaa",
+      "english": "lighter",
+      "indonesian": "korek api gas"
+    },
+    {
+      "kanji": "スイッチ",
+      "furigana": "スイッチ",
+      "latin": "swicchi",
+      "english": "switch",
+      "indonesian": "saklar"
+    },
+    {
+      "kanji": "机",
+      "furigana": "つくえ",
+      "latin": "tsukue",
+      "english": "desk",
+      "indonesian": "meja"
+    },
+    {
+      "kanji": "窓",
+      "furigana": "まど",
+      "latin": "mado",
+      "english": "window",
+      "indonesian": "jendela"
+    },
+    {
+      "kanji": "椅子",
+      "furigana": "いす",
+      "latin": "isu",
+      "english": "chair",
+      "indonesian": "kursi"
+    },
+    {
+      "kanji": "テレビ",
+      "furigana": "テレビ",
+      "latin": "terebe",
+      "english": "television",
+      "indonesian": "televisi"
+    },
+    {
+      "kanji": "ドア",
+      "furigana": "ドア",
+      "latin": "doa",
+      "english": "door",
+      "indonesian": "pintu"
+    },
+    {
+      "kanji": "時計",
+      "furigana": "とけい",
+      "latin": "tokei",
+      "english": "clock",
+      "indonesian": "jam"
+    },
+    {
+      "kanji": "ラジオ",
+      "furigana": "ラジオ",
+      "latin": "rajio",
+      "english": "radio",
+      "indonesian": "radio"
+    },
+    {
+      "kanji": "カメラ",
+      "furigana": "カメラ",
+      "latin": "kamera",
+      "english": "camera",
+      "indonesian": "kamera"
+    },
+    {
+      "kanji": "庭",
+      "furigana": "にわ",
+      "latin": "niwa",
+      "english": "yard",
+      "indonesian": "halaman"
+    },
+    {
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "latin": "kaisha",
+      "english": "company",
+      "indonesian": "perusahaan"
+    },
+    {
+      "kanji": "事務所",
+      "furigana": "じむしょ",
+      "latin": "jimusho",
+      "english": "office",
+      "indonesian": "kantor"
+    },
+    {
+      "kanji": "ロビー",
+      "furigana": "ロビー",
+      "latin": "robii",
+      "english": "lobby",
+      "indonesian": "lobi"
+    },
+    {
+      "kanji": "受付",
+      "furigana": "うけつけ",
+      "latin": "uketsuke",
+      "english": "receptionist",
+      "indonesian": "resepsionis"
+    },
+    {
+      "kanji": "お手洗い",
+      "furigana": "おてあらい",
+      "latin": "otearai",
+      "english": "restroom",
+      "indonesian": "toilet"
+    },
+    {
+      "kanji": "食堂",
+      "furigana": "しょくどう",
+      "latin": "shokudou",
+      "english": "cafeteria",
+      "indonesian": "kantin"
+    },
+    {
+      "kanji": "機械",
+      "furigana": "きかい",
+      "latin": "kikai",
+      "english": "machine",
+      "indonesian": "mesin"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a57cff6ad6fe2060736ced7"
+  },
+  "name": "Set 5",
+  "items": [
+    {
+      "kanji": "電気",
+      "furigana": "でんき",
+      "latin": "denki",
+      "english": "electricity",
+      "indonesian": "listrik"
+    },
+    {
+      "kanji": "専門",
+      "furigana": "せんもん",
+      "latin": "senmon",
+      "english": "major",
+      "indonesian": "jurusan"
+    },
+    {
+      "kanji": "午前",
+      "furigana": "ごぜん",
+      "latin": "gozen",
+      "english": "AM",
+      "indonesian": "AM (jam)"
+    },
+    {
+      "kanji": "工場",
+      "furigana": "こうじょう",
+      "latin": "koujou",
+      "english": "factory",
+      "indonesian": "pabrik"
+    },
+    {
+      "kanji": "駅",
+      "furigana": "えき",
+      "latin": "eki",
+      "english": "train station",
+      "indonesian": "stasiun kereta"
+    },
+    {
+      "kanji": "午後",
+      "furigana": "ごご",
+      "latin": "gogo",
+      "english": "PM",
+      "indonesian": "PM (jam)"
+    },
+    {
+      "kanji": "コンピュータ",
+      "furigana": "コンピュータ",
+      "latin": "konpyuuta",
+      "english": "computer",
+      "indonesian": "komputer"
+    },
+    {
+      "kanji": "床屋",
+      "furigana": "とこや",
+      "latin": "tokoya",
+      "english": "barber",
+      "indonesian": "tukang cukur rambut"
+    },
+    {
+      "kanji": "病院",
+      "furigana": "びょういん",
+      "latin": "byouin",
+      "english": "hospital",
+      "indonesian": "rumah sakit"
+    },
+    {
+      "kanji": "銀行",
+      "furigana": "ぎんこう",
+      "latin": "ginkou",
+      "english": "bank",
+      "indonesian": "bank"
+    },
+    {
+      "kanji": "デパート",
+      "furigana": "デパート",
+      "latin": "depaato",
+      "english": "department store",
+      "indonesian": "mall"
+    },
+    {
+      "kanji": "本屋",
+      "furigana": "ほんや",
+      "latin": "honya",
+      "english": "bookstore",
+      "indonesian": "toko buku"
+    },
+    {
+      "kanji": "誕生日",
+      "furigana": "たんじょうび",
+      "latin": "tanjoubi",
+      "english": "birthday",
+      "indonesian": "ulang tahun"
+    },
+    {
+      "kanji": "飛行機",
+      "furigana": "ひこうき",
+      "latin": "hikouki",
+      "english": "airplane",
+      "indonesian": "pesawat"
+    },
+    {
+      "kanji": "新幹線",
+      "furigana": "しんかんせん",
+      "latin": "shinkansen",
+      "english": "bullet train",
+      "indonesian": "kereta cepat"
+    },
+    {
+      "kanji": "地下鉄",
+      "furigana": "ちかてつ",
+      "latin": "chikatetsu",
+      "english": "subway",
+      "indonesian": "kereta bawah tanah"
+    },
+    {
+      "kanji": "船",
+      "furigana": "ふね",
+      "latin": "fune",
+      "english": "ship",
+      "indonesian": "kapal laut"
+    },
+    {
+      "kanji": "友達",
+      "furigana": "ともだち",
+      "latin": "tomodachi",
+      "english": "friend",
+      "indonesian": "teman"
+    },
+    {
+      "kanji": "魚",
+      "furigana": "さかな",
+      "latin": "sakana",
+      "english": "fish",
+      "indonesian": "ikan"
+    },
+    {
+      "kanji": "恋人",
+      "furigana": "こいびと",
+      "latin": "koibito",
+      "english": "lover",
+      "indonesian": "pacar"
+    },
+    {
+      "kanji": "卵",
+      "furigana": "たまご",
+      "latin": "tamago",
+      "english": "egg",
+      "indonesian": "telur"
+    },
+    {
+      "kanji": "一人で",
+      "furigana": "ひとりで",
+      "latin": "hitoride",
+      "english": "alone",
+      "indonesian": "sendiri"
+    },
+    {
+      "kanji": "バナナ",
+      "furigana": "バナナ",
+      "latin": "banana",
+      "english": "banana",
+      "indonesian": "pisang"
+    },
+    {
+      "kanji": "蜜柑",
+      "furigana": "みかん",
+      "latin": "mikan",
+      "english": "mandarin orange",
+      "indonesian": "jeruk"
+    },
+    {
+      "kanji": "葡萄",
+      "furigana": "ぶどう",
+      "latin": "budou",
+      "english": "grape",
+      "indonesian": "anggur"
+    },
+    {
+      "kanji": "林檎",
+      "furigana": "りんご",
+      "latin": "ringo",
+      "english": "apple",
+      "indonesian": "apel"
+    },
+    {
+      "kanji": "パイナップル",
+      "furigana": "パイナップル",
+      "latin": "painappuru",
+      "english": "pineapple",
+      "indonesian": "nanas"
+    },
+    {
+      "kanji": "西瓜",
+      "furigana": "すいか",
+      "latin": "suika",
+      "english": "watermelon",
+      "indonesian": "semangka"
+    },
+    {
+      "kanji": "火曜日",
+      "furigana": "かようび",
+      "latin": "kayoubi",
+      "english": "Tuesday",
+      "indonesian": "hari selasa"
+    },
+    {
+      "kanji": "月曜日",
+      "furigana": "げつようび",
+      "latin": "getsuyoubi",
+      "english": "Monday",
+      "indonesian": "hari senin"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61c96cce246fdcc2ffa1df"
+  },
+  "name": "Set 6",
+  "items": [
+    {
+      "kanji": "日曜日",
+      "furigana": "にちようび",
+      "latin": "nichiyoubi",
+      "english": "Sunday",
+      "indonesian": "hari minggu"
+    },
+    {
+      "kanji": "水曜日",
+      "furigana": "すいようび",
+      "latin": "suiyoubi",
+      "english": "Wednesday",
+      "indonesian": "hari rabu"
+    },
+    {
+      "kanji": "土曜日",
+      "furigana": "どようび",
+      "latin": "doyoubi",
+      "english": "Saturday",
+      "indonesian": "hari sabtu"
+    },
+    {
+      "kanji": "木曜日",
+      "furigana": "もくようび",
+      "latin": "mokuyoubi",
+      "english": "Thursday",
+      "indonesian": "hari kamis"
+    },
+    {
+      "kanji": "金曜日",
+      "furigana": "きんようび",
+      "latin": "kinyoubi",
+      "english": "Friday",
+      "indonesian": "hari jum'at"
+    },
+    {
+      "kanji": "一",
+      "furigana": "いち",
+      "latin": "ichi",
+      "english": "one",
+      "indonesian": "satu"
+    },
+    {
+      "kanji": "二",
+      "furigana": "に",
+      "latin": "ni",
+      "english": "two",
+      "indonesian": "dua"
+    },
+    {
+      "kanji": "三",
+      "furigana": "さん",
+      "latin": "san",
+      "english": "three",
+      "indonesian": "tiga"
+    },
+    {
+      "kanji": "六",
+      "furigana": "ろく",
+      "latin": "roku",
+      "english": "six",
+      "indonesian": "enam"
+    },
+    {
+      "kanji": "七",
+      "furigana": "しち",
+      "latin": "shichi",
+      "english": "seven",
+      "indonesian": "tujuh"
+    },
+    {
+      "kanji": "八",
+      "furigana": "はち",
+      "latin": "hachi",
+      "english": "eight",
+      "indonesian": "delapan"
+    },
+    {
+      "kanji": "九",
+      "furigana": "きゅう",
+      "latin": "kyuu",
+      "english": "nine",
+      "indonesian": "sembilan"
+    },
+    {
+      "kanji": "十",
+      "furigana": "じゅう",
+      "latin": "juu",
+      "english": "ten",
+      "indonesian": "sepuluh"
+    },
+    {
+      "kanji": "四",
+      "furigana": "し",
+      "latin": "shi",
+      "english": "four",
+      "indonesian": "empat"
+    },
+    {
+      "kanji": "五",
+      "furigana": "ご",
+      "latin": "go",
+      "english": "five",
+      "indonesian": "lima"
+    },
+    {
+      "kanji": "今日",
+      "furigana": "きょう",
+      "latin": "kyou",
+      "english": "today",
+      "indonesian": "hari ini"
+    },
+    {
+      "kanji": "昨日",
+      "furigana": "きのう",
+      "latin": "kinou",
+      "english": "yesterday",
+      "indonesian": "kemarin"
+    },
+    {
+      "kanji": "一昨日",
+      "furigana": "おととい",
+      "latin": "ototoi",
+      "english": "the day before yesterday",
+      "indonesian": "kemarin dulu"
+    },
+    {
+      "kanji": "明日",
+      "furigana": "あした",
+      "latin": "ashita",
+      "english": "tomorrow",
+      "indonesian": "besok"
+    },
+    {
+      "kanji": "明後日",
+      "furigana": "あさって",
+      "latin": "asatte",
+      "english": "the day after tomorrow",
+      "indonesian": "lusa"
+    },
+    {
+      "kanji": "毎日",
+      "furigana": "まいにち",
+      "latin": "mainichi",
+      "english": "every day",
+      "indonesian": "setiap hari"
+    },
+    {
+      "kanji": "明日の朝",
+      "furigana": "あしたのあさ",
+      "latin": "ashita no asa",
+      "english": "tomorrow morning",
+      "indonesian": "besok pagi"
+    },
+    {
+      "kanji": "毎朝",
+      "furigana": "まいあさ",
+      "latin": "maiasa",
+      "english": "every morning",
+      "indonesian": "setiap pagi"
+    },
+    {
+      "kanji": "昨日の朝",
+      "furigana": "きのうのあさ",
+      "latin": "kinou no asa",
+      "english": "yesterday morning",
+      "indonesian": "kemarin pagi"
+    },
+    {
+      "kanji": "一昨日の朝",
+      "furigana": "おとといのあさ",
+      "latin": "ototoi no asa",
+      "english": "the morning before yesterday",
+      "indonesian": "pagi kemarin dulu"
+    },
+    {
+      "kanji": "明後日の朝",
+      "furigana": "あさってのあさ",
+      "latin": "asatte no asa",
+      "english": "the morning after tomorrow",
+      "indonesian": "pagi lusa"
+    },
+    {
+      "kanji": "今朝",
+      "furigana": "けさ",
+      "latin": "kesa",
+      "english": "this morning",
+      "indonesian": "pagi ini"
+    },
+    {
+      "kanji": "明日の晩",
+      "furigana": "あしたのばん",
+      "latin": "ashita no ban",
+      "english": "tomorrow evening",
+      "indonesian": "besok malam"
+    },
+    {
+      "kanji": "明後日の晩",
+      "furigana": "あさってのばん",
+      "latin": "asatte no ban",
+      "english": "the evening after tomorrow",
+      "indonesian": "malam lusa"
+    },
+    {
+      "kanji": "一昨日の晩",
+      "furigana": "おとといのばん",
+      "latin": "ototoi no ban",
+      "english": "the evening before yesterday",
+      "indonesian": "malam kemarin dulu"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61c984ce246fdcc2ffa1e4"
+  },
+  "name": "Set 7",
+  "items": [
+    {
+      "kanji": "毎晩",
+      "furigana": "まいばん",
+      "latin": "maiban",
+      "english": "every night",
+      "indonesian": "setiap malam"
+    },
+    {
+      "kanji": "昨日の晩",
+      "furigana": "きのうのばん",
+      "latin": "kinou no ban",
+      "english": "last night",
+      "indonesian": "kemarin malam"
+    },
+    {
+      "kanji": "今晩",
+      "furigana": "こんばん",
+      "latin": "konban",
+      "english": "tonight",
+      "indonesian": "malam ini"
+    },
+    {
+      "kanji": "毎週",
+      "furigana": "まいしゅう",
+      "latin": "maishuu",
+      "english": "every week",
+      "indonesian": "setiap minggu"
+    },
+    {
+      "kanji": "再来週",
+      "furigana": "さらいしゅう",
+      "latin": "saraishuu",
+      "english": "the week after next",
+      "indonesian": "dua minggu besok"
+    },
+    {
+      "kanji": "来週",
+      "furigana": "らいしゅう",
+      "latin": "raishuu",
+      "english": "next week",
+      "indonesian": "minggu besok"
+    },
+    {
+      "kanji": "先々週",
+      "furigana": "せんせんしゅう",
+      "latin": "sensenshuu",
+      "english": "the week before last",
+      "indonesian": "minggu kemarin dulu"
+    },
+    {
+      "kanji": "先週",
+      "furigana": "せんしゅう",
+      "latin": "senshuu",
+      "english": "last week",
+      "indonesian": "minggu kemarin"
+    },
+    {
+      "kanji": "今週",
+      "furigana": "こんしゅう",
+      "latin": "konshuu",
+      "english": "this week",
+      "indonesian": "minggu ini"
+    },
+    {
+      "kanji": "来月",
+      "furigana": "らいげつ",
+      "latin": "raigetsu",
+      "english": "next month",
+      "indonesian": "bulan depan"
+    },
+    {
+      "kanji": "再来月",
+      "furigana": "さらいげつ",
+      "latin": "saraigetsu",
+      "english": "the month after next",
+      "indonesian": "dua bulan depan"
+    },
+    {
+      "kanji": "先々月",
+      "furigana": "せんせんげつ",
+      "latin": "sensengetsu",
+      "english": "the month before last",
+      "indonesian": "dua bulan lalu"
+    },
+    {
+      "kanji": "先月",
+      "furigana": "せんげつ",
+      "latin": "sengetsu",
+      "english": "last month",
+      "indonesian": "bulan lalu"
+    },
+    {
+      "kanji": "今月",
+      "furigana": "こんげつ",
+      "latin": "kongetsu",
+      "english": "this month",
+      "indonesian": "bulan ini"
+    },
+    {
+      "kanji": "毎月",
+      "furigana": "まいつき",
+      "latin": "maitsuki",
+      "english": "every month",
+      "indonesian": "setiap bulan"
+    },
+    {
+      "kanji": "来年",
+      "furigana": "らいねん",
+      "latin": "rainen",
+      "english": "next year",
+      "indonesian": "tahun depan"
+    },
+    {
+      "kanji": "毎年",
+      "furigana": "まいとし",
+      "latin": "maitoshi",
+      "english": "every year",
+      "indonesian": "setiap tahun"
+    },
+    {
+      "kanji": "一昨年",
+      "furigana": "おととし",
+      "latin": "ototoshi",
+      "english": "the year before last",
+      "indonesian": "dua tahun lalu"
+    },
+    {
+      "kanji": "去年",
+      "furigana": "きょねん",
+      "latin": "kyonen",
+      "english": "last year",
+      "indonesian": "tahun lalu"
+    },
+    {
+      "kanji": "今年",
+      "furigana": "ことし",
+      "latin": "kotoshi",
+      "english": "this year",
+      "indonesian": "tahun ini"
+    },
+    {
+      "kanji": "再来年",
+      "furigana": "さらいねん",
+      "latin": "sarainen",
+      "english": "the year after next",
+      "indonesian": "dua tahun depan"
+    },
+    {
+      "kanji": "辛い",
+      "furigana": "からい",
+      "latin": "karai",
+      "english": "spicy",
+      "indonesian": "pedas"
+    },
+    {
+      "kanji": "甘い",
+      "furigana": "あまい",
+      "latin": "amai",
+      "english": "sweet",
+      "indonesian": "manis"
+    },
+    {
+      "kanji": "不味い",
+      "furigana": "まずい",
+      "latin": "mazui",
+      "english": "unappetizing",
+      "indonesian": "tidak enak"
+    },
+    {
+      "kanji": "嫌い",
+      "furigana": "きらい",
+      "latin": "kirai",
+      "english": "dislike",
+      "indonesian": "tidak suka"
+    },
+    {
+      "kanji": "好き",
+      "furigana": "すき",
+      "latin": "suki",
+      "english": "like",
+      "indonesian": "suka"
+    },
+    {
+      "kanji": "美味しい",
+      "furigana": "おいしい",
+      "latin": "oishii",
+      "english": "delicious",
+      "indonesian": "enak"
+    },
+    {
+      "kanji": "高い",
+      "furigana": "たかい",
+      "latin": "takai",
+      "english": "expensive",
+      "indonesian": "mahal"
+    },
+    {
+      "kanji": "古い",
+      "furigana": "ふるい",
+      "latin": "furui",
+      "english": "old",
+      "indonesian": "lama"
+    },
+    {
+      "kanji": "新しい",
+      "furigana": "あたらしい",
+      "latin": "atarashii",
+      "english": "new",
+      "indonesian": "baru"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61c995ce246fdcc2ffa1e9"
+  },
+  "name": "Set 8",
+  "items": [
+    {
+      "kanji": "安い",
+      "furigana": "やすい",
+      "latin": "yasui",
+      "english": "cheap",
+      "indonesian": "murah"
+    },
+    {
+      "kanji": "拉麺",
+      "furigana": "ラーメン",
+      "latin": "ramen",
+      "english": "ramen noodles",
+      "indonesian": "mie kuah (ramen)"
+    },
+    {
+      "kanji": "病気",
+      "furigana": "びょうき",
+      "latin": "byouki",
+      "english": "illness",
+      "indonesian": "sakit"
+    },
+    {
+      "kanji": "洋杯",
+      "furigana": "コップ",
+      "latin": "koppu",
+      "english": "glass",
+      "indonesian": "gelas"
+    },
+    {
+      "kanji": "珈琲",
+      "furigana": "コーヒー",
+      "latin": "koohii",
+      "english": "coffee",
+      "indonesian": "kopi"
+    },
+    {
+      "kanji": "スプーン",
+      "furigana": "スプーン",
+      "latin": "suupuun",
+      "english": "spoon",
+      "indonesian": "sendok"
+    },
+    {
+      "kanji": "海",
+      "furigana": "うみ",
+      "latin": "umi",
+      "english": "sea",
+      "indonesian": "laut"
+    },
+    {
+      "kanji": "海岸",
+      "furigana": "かいがん",
+      "latin": "kaigan",
+      "english": "coast",
+      "indonesian": "pantai"
+    },
+    {
+      "kanji": "映画",
+      "furigana": "えいが",
+      "latin": "eiga",
+      "english": "movie",
+      "indonesian": "film"
+    },
+    {
+      "kanji": "映画館",
+      "furigana": "えいがかん",
+      "latin": "eigakan",
+      "english": "movie theater",
+      "indonesian": "bioskop"
+    },
+    {
+      "kanji": "箸",
+      "furigana": "はし",
+      "latin": "hashi",
+      "english": "chopsticks",
+      "indonesian": "sumpit"
+    },
+    {
+      "kanji": "熱い",
+      "furigana": "あつい",
+      "latin": "atsui",
+      "english": "hot",
+      "indonesian": "panas"
+    },
+    {
+      "kanji": "音楽",
+      "furigana": "おんがく",
+      "latin": "ongaku",
+      "english": "music",
+      "indonesian": "musik"
+    },
+    {
+      "kanji": "寒い",
+      "furigana": "さむい",
+      "latin": "samui",
+      "english": "cold",
+      "indonesian": "dingin"
+    },
+    {
+      "kanji": "上手",
+      "furigana": "じょうず",
+      "latin": "jouzu",
+      "english": "skillful",
+      "indonesian": "pintar"
+    },
+    {
+      "kanji": "下手",
+      "furigana": "へた",
+      "latin": "heta",
+      "english": "unskillful",
+      "indonesian": "bodoh"
+    },
+    {
+      "kanji": "日本語",
+      "furigana": "にほんご",
+      "latin": "nihongo",
+      "english": "Japanese language",
+      "indonesian": "bahasa jepang"
+    },
+    {
+      "kanji": "涼しい",
+      "furigana": "すずしい",
+      "latin": "suzushii",
+      "english": "cool",
+      "indonesian": "sejuk"
+    },
+    {
+      "kanji": "お金",
+      "furigana": "かねお",
+      "latin": "okane",
+      "english": "money",
+      "indonesian": "uamg"
+    },
+    {
+      "kanji": "薬",
+      "furigana": "くすり",
+      "latin": "kusuri",
+      "english": "medicine",
+      "indonesian": "obat"
+    },
+    {
+      "kanji": "来る",
+      "furigana": "くる",
+      "latin": "kuru",
+      "english": "to come",
+      "indonesian": "datang"
+    },
+    {
+      "kanji": "吸う",
+      "furigana": "すう",
+      "latin": "suu",
+      "english": "to inhale",
+      "indonesian": "menghirup"
+    },
+    {
+      "kanji": "取る",
+      "furigana": "とる",
+      "latin": "toru",
+      "english": "to take",
+      "indonesian": "mengambil"
+    },
+    {
+      "kanji": "掛かる",
+      "furigana": "かかる",
+      "latin": "kakaru",
+      "english": "to take (resources/time)",
+      "indonesian": "mengambil (sumber daya)"
+    },
+    {
+      "kanji": "始める",
+      "furigana": "はじめる",
+      "latin": "hajimeru",
+      "english": "to begin",
+      "indonesian": "memulai"
+    },
+    {
+      "kanji": "終わる",
+      "furigana": "おわる",
+      "latin": "owaru",
+      "english": "to end",
+      "indonesian": "menyelesaikan"
+    },
+    {
+      "kanji": "切る",
+      "furigana": "きる",
+      "latin": "kiru",
+      "english": "to cut",
+      "indonesian": "memotong"
+    },
+    {
+      "kanji": "上げる",
+      "furigana": "あげる",
+      "latin": "ageru",
+      "english": "to give",
+      "indonesian": "memberikan"
+    },
+    {
+      "kanji": "修理する",
+      "furigana": "しゅうりする",
+      "latin": "shurisuru",
+      "english": "to repair",
+      "indonesian": "memperbaiki"
+    },
+    {
+      "kanji": "貰う",
+      "furigana": "もらう",
+      "latin": "morau",
+      "english": "to receive",
+      "indonesian": "menerima"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61c9a5ce246fdcc2ffa1ee"
+  },
+  "name": "Set 9",
+  "items": [
+    {
+      "kanji": "貸す",
+      "furigana": "かす",
+      "latin": "kasu",
+      "english": "to lend",
+      "indonesian": "meminjamkan"
+    },
+    {
+      "kanji": "教える",
+      "furigana": "おしえる",
+      "latin": "oshieru",
+      "english": "to teach",
+      "indonesian": "mengajar"
+    },
+    {
+      "kanji": "掃除する",
+      "furigana": "そうじする",
+      "latin": "soujisuru",
+      "english": "to clean",
+      "indonesian": "membersihkan"
+    },
+    {
+      "kanji": "居る",
+      "furigana": "いる",
+      "latin": "iru",
+      "english": "to exist (animate)",
+      "indonesian": "ada (benda hidup)"
+    },
+    {
+      "kanji": "習う",
+      "furigana": "ならう",
+      "latin": "narau",
+      "english": "to learn",
+      "indonesian": "mempelajari"
+    },
+    {
+      "kanji": "有る",
+      "furigana": "ある",
+      "latin": "aru",
+      "english": "to exist (inanimate)",
+      "indonesian": "ada (benda mati)"
+    },
+    {
+      "kanji": "着く",
+      "furigana": "つく",
+      "latin": "tsuku",
+      "english": "to arrive",
+      "indonesian": "sampai"
+    },
+    {
+      "kanji": "送る",
+      "furigana": "おくる",
+      "latin": "okuru",
+      "english": "to send",
+      "indonesian": "mengirim"
+    },
+    {
+      "kanji": "結婚する",
+      "furigana": "けっこんする",
+      "latin": "kekkonsuru",
+      "english": "to marry",
+      "indonesian": "menikah"
+    },
+    {
+      "kanji": "出す",
+      "furigana": "だす",
+      "latin": "dasu",
+      "english": "to take out",
+      "indonesian": "mengeluarkan"
+    },
+    {
+      "kanji": "作る",
+      "furigana": "つくる",
+      "latin": "tsukuru",
+      "english": "to make",
+      "indonesian": "membuat"
+    },
+    {
+      "kanji": "変える",
+      "furigana": "かえる",
+      "latin": "kaeru",
+      "english": "to change",
+      "indonesian": "menukarkan"
+    },
+    {
+      "kanji": "見学する",
+      "furigana": "けんがくする",
+      "latin": "kengakusuru",
+      "english": "to tour / visit for study",
+      "indonesian": "wisata"
+    },
+    {
+      "kanji": "遊ぶ",
+      "furigana": "あそぶ",
+      "latin": "asobu",
+      "english": "to play",
+      "indonesian": "bermain"
+    },
+    {
+      "kanji": "出る",
+      "furigana": "でる",
+      "latin": "deru",
+      "english": "to leave / exit",
+      "indonesian": "meninggalkan"
+    },
+    {
+      "kanji": "急ぐ",
+      "furigana": "いそぐ",
+      "latin": "isogu",
+      "english": "to hurry",
+      "indonesian": "terburu-buru"
+    },
+    {
+      "kanji": "呼ぶ",
+      "furigana": "よぶ",
+      "latin": "yobu",
+      "english": "to call",
+      "indonesian": "memanggil"
+    },
+    {
+      "kanji": "待つ",
+      "furigana": "まつ",
+      "latin": "matsu",
+      "english": "to wait",
+      "indonesian": "menunggu"
+    },
+    {
+      "kanji": "言う",
+      "furigana": "いう",
+      "latin": "iu",
+      "english": "to say",
+      "indonesian": "mengucapkan"
+    },
+    {
+      "kanji": "入る",
+      "furigana": "はいる",
+      "latin": "hairu",
+      "english": "to enter",
+      "indonesian": "memasuki"
+    },
+    {
+      "kanji": "見せる",
+      "furigana": "みせる",
+      "latin": "miseru",
+      "english": "to show",
+      "indonesian": "memperlihatkan"
+    },
+    {
+      "kanji": "置く",
+      "furigana": "おく",
+      "latin": "oku",
+      "english": "to put / place",
+      "indonesian": "meletakkan"
+    },
+    {
+      "kanji": "座る",
+      "furigana": "すわる",
+      "latin": "suwaru",
+      "english": "to sit",
+      "indonesian": "duduk"
+    },
+    {
+      "kanji": "立つ",
+      "furigana": "たつ",
+      "latin": "tatsu",
+      "english": "to stand",
+      "indonesian": "berdiri"
+    },
+    {
+      "kanji": "付ける",
+      "furigana": "つける",
+      "latin": "tsukeru",
+      "english": "to turn on the light",
+      "indonesian": "menyalakan lampu"
+    },
+    {
+      "kanji": "持つ",
+      "furigana": "もつ",
+      "latin": "motsu",
+      "english": "to hold / carry",
+      "indonesian": "membawa"
+    },
+    {
+      "kanji": "消す",
+      "furigana": "けす",
+      "latin": "kesu",
+      "english": "to turn off the light",
+      "indonesian": "mematikan lampu"
+    },
+    {
+      "kanji": "知る",
+      "furigana": "しる",
+      "latin": "shiru",
+      "english": "to know",
+      "indonesian": "mengenal"
+    },
+    {
+      "kanji": "開ける",
+      "furigana": "あける",
+      "latin": "akeru",
+      "english": "to open",
+      "indonesian": "membuka"
+    },
+    {
+      "kanji": "閉める",
+      "furigana": "しめる",
+      "latin": "shimeru",
+      "english": "to close",
+      "indonesian": "menutup"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61c9c3ce246fdcc2ffa1f4"
+  },
+  "name": "Set 10",
+  "items": [
+    {
+      "kanji": "売る",
+      "furigana": "うる",
+      "latin": "uru",
+      "english": "to sell",
+      "indonesian": "menjual"
+    },
+    {
+      "kanji": "手伝う",
+      "furigana": "てつだう",
+      "latin": "tetsudau",
+      "english": "to help / assist",
+      "indonesian": "membantu"
+    },
+    {
+      "kanji": "持つ",
+      "furigana": "もつ",
+      "latin": "motsu",
+      "english": "to possess / own",
+      "indonesian": "memiliki"
+    },
+    {
+      "kanji": "着る",
+      "furigana": "きる",
+      "latin": "きる",
+      "english": "to wear (clothing above the waist)",
+      "indonesian": "memakai"
+    },
+    {
+      "kanji": "返す",
+      "furigana": "かえす",
+      "latin": "kaesu",
+      "english": "to return (an object)",
+      "indonesian": "mengembalikan"
+    },
+    {
+      "kanji": "払う",
+      "furigana": "はらう",
+      "latin": "harau",
+      "english": "to pay",
+      "indonesian": "membayar"
+    },
+    {
+      "kanji": "乗る",
+      "furigana": "のる",
+      "latin": "noru",
+      "english": "to board / ride",
+      "indonesian": "naik"
+    },
+    {
+      "kanji": "降りる",
+      "furigana": "おりる",
+      "latin": "oriru",
+      "english": "to get off / descend",
+      "indonesian": "turun"
+    },
+    {
+      "kanji": "止まる",
+      "furigana": "とまる",
+      "latin": "tomaru",
+      "english": "to stop",
+      "indonesian": "berhenti"
+    },
+    {
+      "kanji": "役に立つ",
+      "furigana": "やくにたつ",
+      "latin": "yakunitatsu",
+      "english": "to be useful",
+      "indonesian": "bermanfaat"
+    },
+    {
+      "kanji": "要る",
+      "furigana": "いる",
+      "latin": "iru",
+      "english": "to need",
+      "indonesian": "membutuhkan"
+    },
+    {
+      "kanji": "困る",
+      "furigana": "こまる",
+      "latin": "komaru",
+      "english": "to be troubled / in trouble",
+      "indonesian": "bermasalah"
+    },
+    {
+      "kanji": "無くす",
+      "furigana": "なくす",
+      "latin": "nakusu",
+      "english": "to lose (something)",
+      "indonesian": "kehilangan"
+    },
+    {
+      "kanji": "脱ぐ",
+      "furigana": "ぬぐ",
+      "latin": "nugu",
+      "english": "to take off (clothing)",
+      "indonesian": "melepas"
+    },
+    {
+      "kanji": "触る",
+      "furigana": "さわる",
+      "latin": "sawaru",
+      "english": "to touch",
+      "indonesian": "menyentuh"
+    },
+    {
+      "kanji": "笑う",
+      "furigana": "わらう",
+      "latin": "warau",
+      "english": "to laugh",
+      "indonesian": "tertawa"
+    },
+    {
+      "kanji": "入れる",
+      "furigana": "いれる",
+      "latin": "ireru",
+      "english": "to insert / put in",
+      "indonesian": "memasukkan"
+    },
+    {
+      "kanji": "夏",
+      "furigana": "なつ",
+      "latin": "natsu",
+      "english": "summer",
+      "indonesian": "musim panas"
+    },
+    {
+      "kanji": "秋",
+      "furigana": "あき",
+      "latin": "aki",
+      "english": "autumn",
+      "indonesian": "musim gugur"
+    },
+    {
+      "kanji": "冬",
+      "furigana": "ふゆ",
+      "latin": "fuyu",
+      "english": "winter",
+      "indonesian": "musim dingin"
+    },
+    {
+      "kanji": "春",
+      "furigana": "はる",
+      "latin": "haru",
+      "english": "spring",
+      "indonesian": "musim semi"
+    },
+    {
+      "kanji": "東",
+      "furigana": "ひがし",
+      "latin": "higashi",
+      "english": "east",
+      "indonesian": "timur"
+    },
+    {
+      "kanji": "南",
+      "furigana": "みなみ",
+      "latin": "minami",
+      "english": "south",
+      "indonesian": "selatan"
+    },
+    {
+      "kanji": "西",
+      "furigana": "にし",
+      "latin": "nishi",
+      "english": "west",
+      "indonesian": "barat"
+    },
+    {
+      "kanji": "北",
+      "furigana": "きた",
+      "latin": "kita",
+      "english": "north",
+      "indonesian": "utara"
+    },
+    {
+      "kanji": "下",
+      "furigana": "した",
+      "latin": "shita",
+      "english": "below / down",
+      "indonesian": "bawah"
+    },
+    {
+      "kanji": "右",
+      "furigana": "みぎ",
+      "latin": "migi",
+      "english": "right",
+      "indonesian": "kanan"
+    },
+    {
+      "kanji": "上",
+      "furigana": "うえ",
+      "latin": "ue",
+      "english": "above / up",
+      "indonesian": "atas"
+    },
+    {
+      "kanji": "左",
+      "furigana": "ひだり",
+      "latin": "hidari",
+      "english": "left",
+      "indonesian": "kiri"
+    },
+    {
+      "kanji": "止める",
+      "furigana": "とめる",
+      "latin": "tomeru",
+      "english": "to stop (something)",
+      "indonesian": "menghentikan"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61c9d7ce246fdcc2ffa1f9"
+  },
+  "name": "Set 11",
+  "items": [
+    {
+      "kanji": "気を付ける",
+      "furigana": "きをつける",
+      "latin": "ki o tsukeru",
+      "english": "to be careful",
+      "indonesian": "berhati-hati"
+    },
+    {
+      "kanji": "持ってくる",
+      "furigana": "もってくる",
+      "latin": "mottekuru",
+      "english": "to bring",
+      "indonesian": "membawakan"
+    },
+    {
+      "kanji": "心配する",
+      "furigana": "しんぱいする",
+      "latin": "shinpaisuru",
+      "english": "to worry",
+      "indonesian": "mengkhawatirkan"
+    },
+    {
+      "kanji": "弾く",
+      "furigana": "ひく",
+      "latin": "hiku",
+      "english": "to play (a string instrument)",
+      "indonesian": "memainkan (alat musik tali)"
+    },
+    {
+      "kanji": "直す",
+      "furigana": "なおす",
+      "latin": "naosu",
+      "english": "to correct / repair",
+      "indonesian": "membetulkan"
+    },
+    {
+      "kanji": "治る",
+      "furigana": "なおる",
+      "latin": "naoru",
+      "english": "to be cured / get well",
+      "indonesian": "sembuh"
+    },
+    {
+      "kanji": "泳ぐ",
+      "furigana": "およぐ",
+      "latin": "oyogu",
+      "english": "to swim",
+      "indonesian": "berenang"
+    },
+    {
+      "kanji": "出かける",
+      "furigana": "でかける",
+      "latin": "dekakeru",
+      "english": "to go out",
+      "indonesian": "berangkat"
+    },
+    {
+      "kanji": "ノックする",
+      "furigana": "ノックする",
+      "latin": "nokkusuru",
+      "english": "to knock on a door",
+      "indonesian": "mengetuk pintu"
+    },
+    {
+      "kanji": "故障する",
+      "furigana": "こしょうする",
+      "latin": "koshousuru",
+      "english": "to break down (machinery / car)",
+      "indonesian": "rusak (mobil)"
+    },
+    {
+      "kanji": "泊まる",
+      "furigana": "とまる",
+      "latin": "tomaru",
+      "english": "to stay overnight",
+      "indonesian": "menetap"
+    },
+    {
+      "kanji": "止める",
+      "furigana": "やめる",
+      "latin": "yameru",
+      "english": "to quit / stop (an activity)",
+      "indonesian": "berhenti (aktivitas)"
+    },
+    {
+      "kanji": "思う",
+      "furigana": "思う",
+      "latin": "omou",
+      "english": "to think (express an opinion)",
+      "indonesian": "berpikir (pendapat)"
+    },
+    {
+      "kanji": "渡る",
+      "furigana": "わたる",
+      "latin": "wataru",
+      "english": "to cross over",
+      "indonesian": "menyebrang"
+    },
+    {
+      "kanji": "曲がる",
+      "furigana": "まがる",
+      "latin": "magaru",
+      "english": "to turn / bend",
+      "indonesian": "berbelok"
+    },
+    {
+      "kanji": "注意する",
+      "furigana": "ちゅういする",
+      "latin": "chuuisuru",
+      "english": "to be cautious / pay attention",
+      "indonesian": "berwaspada"
+    },
+    {
+      "kanji": "乗り換える",
+      "furigana": "のりかえる",
+      "latin": "norikaeru",
+      "english": "to transfer / change vehicles",
+      "indonesian": "berganti (kendaraan)"
+    },
+    {
+      "kanji": "生まれる",
+      "furigana": "うまれる",
+      "latin": "umareru",
+      "english": "to be born",
+      "indonesian": "dilahirkan"
+    },
+    {
+      "kanji": "質問する",
+      "furigana": "しつもんする",
+      "latin": "shitsumonsuru",
+      "english": "to ask a question",
+      "indonesian": "bertanya"
+    },
+    {
+      "kanji": "書く",
+      "furigana": "かく",
+      "latin": "kaku",
+      "english": "to draw / paint",
+      "indonesian": "melukis"
+    },
+    {
+      "kanji": "組み立てる",
+      "furigana": "くみたてる",
+      "latin": "kumitateru",
+      "english": "to assemble / construct",
+      "indonesian": "merakit"
+    },
+    {
+      "kanji": "分解する",
+      "furigana": "ぶんかいする",
+      "latin": "bukaisuru",
+      "english": "to disassemble / dismantle",
+      "indonesian": "membongkar"
+    },
+    {
+      "kanji": "説明する",
+      "furigana": "せつめいする",
+      "latin": "setsumeisuru",
+      "english": "to explain",
+      "indonesian": "menjelaskan"
+    },
+    {
+      "kanji": "調べる",
+      "furigana": "しらべる",
+      "latin": "shiraberu",
+      "english": "to investigate / check",
+      "indonesian": "mengecek"
+    },
+    {
+      "kanji": "動く",
+      "furigana": "うごく",
+      "latin": "ugoku",
+      "english": "to move",
+      "indonesian": "bergerak"
+    },
+    {
+      "kanji": "押す",
+      "furigana": "おす",
+      "latin": "osu",
+      "english": "to push",
+      "indonesian": "mendorong"
+    },
+    {
+      "kanji": "引く",
+      "furigana": "ひく",
+      "latin": "hiku",
+      "english": "to pull",
+      "indonesian": "menarik"
+    },
+    {
+      "kanji": "見える",
+      "furigana": "みえる",
+      "latin": "mieru",
+      "english": "to be visible",
+      "indonesian": "terlihat"
+    },
+    {
+      "kanji": "聞こえる",
+      "furigana": "きこえる",
+      "latin": "kikoeru",
+      "english": "to be audible",
+      "indonesian": "terdengar"
+    },
+    {
+      "kanji": "出来る",
+      "furigana": "できる",
+      "latin": "dekiru",
+      "english": "to be able to do / can",
+      "indonesian": "bisa"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61c9e6ce246fdcc2ffa1fe"
+  },
+  "name": "Set 12",
+  "items": [
+    {
+      "kanji": "食事する",
+      "furigana": "しょくじする",
+      "latin": "shokujisuru",
+      "english": "to have a meal",
+      "indonesian": "makan (makan pagi, siang, malam)"
+    },
+    {
+      "kanji": "パン",
+      "furigana": "パン",
+      "latin": "pan",
+      "english": "bread",
+      "indonesian": "roti"
+    },
+    {
+      "kanji": "ネクタイ",
+      "furigana": "ネクタイ",
+      "latin": "nekutai",
+      "english": "necktie",
+      "indonesian": "dasi"
+    },
+    {
+      "kanji": "靴",
+      "furigana": "くつ",
+      "latin": "kutsu",
+      "english": "shoes",
+      "indonesian": "sepatu"
+    },
+    {
+      "kanji": "花",
+      "furigana": "はな",
+      "latin": "hana",
+      "english": "flower",
+      "indonesian": "bunga"
+    },
+    {
+      "kanji": "手紙",
+      "furigana": "てがみ",
+      "latin": "tegami",
+      "english": "letter",
+      "indonesian": "surat"
+    },
+    {
+      "kanji": "切手",
+      "furigana": "きって",
+      "latin": "kitte",
+      "english": "postage stamp",
+      "indonesian": "perangko"
+    },
+    {
+      "kanji": "封筒",
+      "furigana": "ふうとう",
+      "latin": "fuutou",
+      "english": "envelope",
+      "indonesian": "amplop"
+    },
+    {
+      "kanji": "エアメール",
+      "furigana": "エアメール",
+      "latin": "eameeru",
+      "english": "airmail",
+      "indonesian": "airmail"
+    },
+    {
+      "kanji": "葉書",
+      "furigana": "はがき",
+      "latin": "hagaki",
+      "english": "postcard",
+      "indonesian": "kartu pos"
+    },
+    {
+      "kanji": "絵葉書",
+      "furigana": "えはがき",
+      "latin": "ehagaki",
+      "english": "picture postcard",
+      "indonesian": "kartu pos (bergambar)"
+    },
+    {
+      "kanji": "切符",
+      "furigana": "きっぷ",
+      "latin": "kippu",
+      "english": "ticket",
+      "indonesian": "tiket"
+    },
+    {
+      "kanji": "講义",
+      "furigana": "こうぎ",
+      "latin": "kougi",
+      "english": "lecture",
+      "indonesian": "kuliah"
+    },
+    {
+      "kanji": "国",
+      "furigana": "くに",
+      "latin": "kuni",
+      "english": "country",
+      "indonesian": "negara"
+    },
+    {
+      "kanji": "大",
+      "furigana": "だい",
+      "latin": "dai",
+      "english": "big",
+      "indonesian": "besar"
+    },
+    {
+      "kanji": "中",
+      "furigana": "なか",
+      "latin": "naka",
+      "english": "inside",
+      "indonesian": "di dalam"
+    },
+    {
+      "kanji": "長い",
+      "furigana": "ながい",
+      "latin": "nagai",
+      "english": "long",
+      "indonesian": "panjang"
+    },
+    {
+      "kanji": "外",
+      "furigana": "そと",
+      "latin": "soto",
+      "english": "outside",
+      "indonesian": "di luar"
+    },
+    {
+      "kanji": "生",
+      "furigana": "せい",
+      "latin": "sei",
+      "english": "life / living",
+      "indonesian": "kehidupan"
+    },
+    {
+      "kanji": "後ろ",
+      "furigana": "うしろ",
+      "latin": "ushiro",
+      "english": "behind",
+      "indonesian": "di belakang"
+    },
+    {
+      "kanji": "前",
+      "furigana": "まえ",
+      "latin": "mae",
+      "english": "in front / before",
+      "indonesian": "di depan"
+    },
+    {
+      "kanji": "山",
+      "furigana": "やま",
+      "latin": "yama",
+      "english": "mountain",
+      "indonesian": "gunung"
+    },
+    {
+      "kanji": "川",
+      "furigana": "かわ",
+      "latin": "kawa",
+      "english": "river",
+      "indonesian": "sungai"
+    },
+    {
+      "kanji": "男",
+      "furigana": "おとこ",
+      "latin": "otoko",
+      "english": "male / man",
+      "indonesian": "laki-laki"
+    },
+    {
+      "kanji": "女",
+      "furigana": "おんな",
+      "latin": "onna",
+      "english": "female / woman",
+      "indonesian": "perempuan"
+    },
+    {
+      "kanji": "高等学校",
+      "furigana": "こうとうがっこう",
+      "latin": "koutougakkou",
+      "english": "high school",
+      "indonesian": "sekolah menengah atas"
+    },
+    {
+      "kanji": "真実",
+      "furigana": "しんじつ",
+      "latin": "shinjitsu",
+      "english": "truth / reality",
+      "indonesian": "kebenaran / kenyataan"
+    },
+    {
+      "kanji": "写真",
+      "furigana": "しゃしん",
+      "latin": "shashin",
+      "english": "photograph",
+      "indonesian": "foto"
+    },
+    {
+      "kanji": "小学校",
+      "furigana": "しょうがっこう",
+      "latin": "shougakkou",
+      "english": "elementary school",
+      "indonesian": "sekolah dasar"
+    },
+    {
+      "kanji": "大学",
+      "furigana": "だいがく",
+      "latin": "daigaku",
+      "english": "university / college",
+      "indonesian": "universitas / perguruan tinggi"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61c9f4ce246fdcc2ffa203"
+  },
+  "name": "Set 13",
+  "items": [
+    {
+      "kanji": "道",
+      "furigana": "みち",
+      "latin": "michi",
+      "english": "road / path / way",
+      "indonesian": "jalan"
+    },
+    {
+      "kanji": "足",
+      "furigana": "あし",
+      "latin": "ashi",
+      "english": "foot / leg",
+      "indonesian": "kaki"
+    },
+    {
+      "kanji": "耳",
+      "furigana": "みみ",
+      "latin": "mimi",
+      "english": "ear",
+      "indonesian": "telinga"
+    },
+    {
+      "kanji": "口",
+      "furigana": "くち",
+      "latin": "kuchi",
+      "english": "mouth",
+      "indonesian": "mulut"
+    },
+    {
+      "kanji": "頭",
+      "furigana": "あたま",
+      "latin": "atama",
+      "english": "head",
+      "indonesian": "kepala"
+    },
+    {
+      "kanji": "歯",
+      "furigana": "は",
+      "latin": "ha",
+      "english": "tooth",
+      "indonesian": "gigi"
+    },
+    {
+      "kanji": "葉",
+      "furigana": "は",
+      "latin": "ha",
+      "english": "leaf",
+      "indonesian": "daun"
+    },
+    {
+      "kanji": "草",
+      "furigana": "くさ",
+      "latin": "kusa",
+      "english": "grass",
+      "indonesian": "rumput"
+    },
+    {
+      "kanji": "服",
+      "furigana": "ふく",
+      "latin": "fuku",
+      "english": "clothes",
+      "indonesian": "pakaian"
+    },
+    {
+      "kanji": "手",
+      "furigana": "て",
+      "latin": "te",
+      "english": "hand",
+      "indonesian": "tangan"
+    },
+    {
+      "kanji": "光",
+      "furigana": "ひかり",
+      "latin": "hikari",
+      "english": "light",
+      "indonesian": "cahaya"
+    },
+    {
+      "kanji": "姉妹",
+      "furigana": "しまい",
+      "latin": "shimai",
+      "english": "sisters",
+      "indonesian": "saudara perempuan"
+    },
+    {
+      "kanji": "兄弟",
+      "furigana": "きょうだい",
+      "latin": "kyoudai",
+      "english": "siblings / brothers",
+      "indonesian": "saudara kandung / saudara laki-laki"
+    },
+    {
+      "kanji": "稲光",
+      "furigana": "いなびかり",
+      "latin": "inabikari",
+      "english": "flash of lightning",
+      "indonesian": "kilatan petir"
+    },
+    {
+      "kanji": "雲",
+      "furigana": "くも",
+      "latin": "kumo",
+      "english": "cloud",
+      "indonesian": "awan"
+    },
+    {
+      "kanji": "台風",
+      "furigana": "たいふう",
+      "latin": "taifuu",
+      "english": "typhoon",
+      "indonesian": "topan"
+    },
+    {
+      "kanji": "雷",
+      "furigana": "かみなり",
+      "latin": "kaminari",
+      "english": "thunder / lightning",
+      "indonesian": "guntur / petir"
+    },
+    {
+      "kanji": "嵐",
+      "furigana": "あらし",
+      "latin": "arashi",
+      "english": "storm",
+      "indonesian": "badai"
+    },
+    {
+      "kanji": "太陽",
+      "furigana": "たいよう",
+      "latin": "taiyo",
+      "english": "sun",
+      "indonesian": "matahari"
+    },
+    {
+      "kanji": "地震",
+      "furigana": "じしん",
+      "latin": "jishin",
+      "english": "earthquake",
+      "indonesian": "gempa bumi"
+    },
+    {
+      "kanji": "小雨",
+      "furigana": "こさめ",
+      "latin": "kosame",
+      "english": "drizzle / light rain",
+      "indonesian": "gerimis / hujan rintik-rintik"
+    },
+    {
+      "kanji": "煙",
+      "furigana": "けむり",
+      "latin": "kemuri",
+      "english": "smoke",
+      "indonesian": "asap"
+    },
+    {
+      "kanji": "夜明け",
+      "furigana": "よあけ",
+      "latin": "yoake",
+      "english": "dawn / daybreak",
+      "indonesian": "fajar / subuh"
+    },
+    {
+      "kanji": "大洋",
+      "furigana": "たいよう",
+      "latin": "taiyou",
+      "english": "ocean",
+      "indonesian": "samudra"
+    },
+    {
+      "kanji": "波",
+      "furigana": "なみ",
+      "latin": "nami",
+      "english": "wave",
+      "indonesian": "gelombang / ombak"
+    },
+    {
+      "kanji": "気候",
+      "furigana": "きこう",
+      "latin": "kikou",
+      "english": "climate",
+      "indonesian": "iklim"
+    },
+    {
+      "kanji": "満月",
+      "furigana": "まんげつ",
+      "latin": "mangetsu",
+      "english": "full moon",
+      "indonesian": "bulan purnama"
+    },
+    {
+      "kanji": "入口",
+      "furigana": "いりぐち",
+      "latin": "iriguchi",
+      "english": "Entrance",
+      "indonesian": "pintu masuk"
+    },
+    {
+      "kanji": "出口",
+      "furigana": "でぐち",
+      "latin": "deguchi",
+      "english": "Exit",
+      "indonesian": "pintu keluar"
+    },
+    {
+      "kanji": "お手洗い",
+      "furigana": "おてあらい",
+      "latin": "otearai",
+      "english": "Restroom",
+      "indonesian": "toilet / kamar kecil"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61ca02ce246fdcc2ffa208"
+  },
+  "name": "Set 14",
+  "items": [
+    {
+      "kanji": "営業中",
+      "furigana": "えいぎょうちゅう",
+      "latin": "eigyou-chuu",
+      "english": "Open for business",
+      "indonesian": "Buka (sedang beroperasi)"
+    },
+    {
+      "kanji": "準備中",
+      "furigana": "じゅんびちゅう",
+      "latin": "junbi-chuu",
+      "english": "Preparing (Closed)",
+      "indonesian": "Sedang bersiap (Tutup)"
+    },
+    {
+      "kanji": "案内所",
+      "furigana": "あんないじょ",
+      "latin": "annai-jo",
+      "english": "Information desk",
+      "indonesian": "Meja informasi / Pusat informasi"
+    },
+    {
+      "kanji": "注意",
+      "furigana": "ちゅうい",
+      "latin": "chuui",
+      "english": "Caution / Warning",
+      "indonesian": "Peringatan / Hati-hati"
+    },
+    {
+      "kanji": "危険",
+      "furigana": "きけん",
+      "latin": "kiken",
+      "english": "Danger",
+      "indonesian": "Bahaya"
+    },
+    {
+      "kanji": "非常口",
+      "furigana": "ひじょうぐち",
+      "latin": "hijou-guchi",
+      "english": "Emergency exit",
+      "indonesian": "Pintu keluar darurat"
+    },
+    {
+      "kanji": "改札",
+      "furigana": "かいさつ",
+      "latin": "kaisatsu",
+      "english": "Ticket gate",
+      "indonesian": "Pintu pemeriksaan tiket / Gerbang tiket"
+    },
+    {
+      "kanji": "受付",
+      "furigana": "うけつけ",
+      "latin": "uketsuke",
+      "english": "Reception",
+      "indonesian": "Resepsionis / Tempat penerimaan tamu"
+    },
+    {
+      "kanji": "料金",
+      "furigana": "りょうきん",
+      "latin": "ryoukin",
+      "english": "Fee / Charge",
+      "indonesian": "Biaya / Tarif"
+    },
+    {
+      "kanji": "窓口",
+      "furigana": "まどぐch",
+      "latin": "madoguchi",
+      "english": "Service counter",
+      "indonesian": "Loket pelayanan"
+    },
+    {
+      "kanji": "自動",
+      "furigana": "じどう",
+      "latin": "jidou",
+      "english": "Automatic",
+      "indonesian": "Otomatis"
+    },
+    {
+      "kanji": "切符",
+      "furigana": "きっぷ",
+      "latin": "kippu",
+      "english": "Ticket",
+      "indonesian": "Tiket"
+    },
+    {
+      "kanji": "階段",
+      "furigana": "かいだん",
+      "latin": "kaidan",
+      "english": "Stairs",
+      "indonesian": "Tangga"
+    },
+    {
+      "kanji": "喫煙所",
+      "furigana": "きつえんじょ",
+      "latin": "kitsuen-jo",
+      "english": "Smoking area",
+      "indonesian": "Area merokok"
+    },
+    {
+      "kanji": "禁煙",
+      "furigana": "きんえん",
+      "latin": "kin'en",
+      "english": "No smoking",
+      "indonesian": "Dilarang merokok"
+    },
+    {
+      "kanji": "満席",
+      "furigana": "まんせき",
+      "latin": "manseki",
+      "english": "Full / No seats",
+      "indonesian": "Penuh / Tempat duduk habis"
+    },
+    {
+      "kanji": "停止",
+      "furigana": "ていし",
+      "latin": "teishi",
+      "english": "Stop / Suspension",
+      "indonesian": "Berhenti / Penghentian"
+    },
+    {
+      "kanji": "失敗",
+      "furigana": "しっぱい",
+      "latin": "shippai",
+      "english": "Failure",
+      "indonesian": "Kegagalan"
+    },
+    {
+      "kanji": "実行",
+      "furigana": "じっこう",
+      "latin": "jikkou",
+      "english": "Execute / Run",
+      "indonesian": "Eksekusi / Jalankan"
+    },
+    {
+      "kanji": "接続",
+      "furigana": "せつぞく",
+      "latin": "setsuzoku",
+      "english": "Connection",
+      "indonesian": "Koneksi / Sambungan"
+    },
+    {
+      "kanji": "成功",
+      "furigana": "せいこう",
+      "latin": "seikou",
+      "english": "Success",
+      "indonesian": "Keberhasilan / Sukses"
+    },
+    {
+      "kanji": "設定",
+      "furigana": "せってい",
+      "latin": "settei",
+      "english": "Settings",
+      "indonesian": "Pengaturan"
+    },
+    {
+      "kanji": "同期",
+      "furigana": "どうき",
+      "latin": "douki",
+      "english": "Sync / Synchronization",
+      "indonesian": "Sinkronisasi"
+    },
+    {
+      "kanji": "検索",
+      "furigana": "けんさく",
+      "latin": "kensaku",
+      "english": "Search",
+      "indonesian": "Pencarian / Cari"
+    },
+    {
+      "kanji": "構築",
+      "furigana": "こうちく",
+      "latin": "kouchiku",
+      "english": "Build / Construct",
+      "indonesian": "Membangun / Konstruksi"
+    },
+    {
+      "kanji": "機能",
+      "furigana": "きのう",
+      "latin": "kinou",
+      "english": "Function / Feature",
+      "indonesian": "Fungsi / Fitur"
+    },
+    {
+      "kanji": "更新",
+      "furigana": "こうしん",
+      "latin": "koushin",
+      "english": "Update",
+      "indonesian": "Pembaruan / Perbarui"
+    },
+    {
+      "kanji": "処理",
+      "furigana": "しょり",
+      "latin": "shori",
+      "english": "Process / Processing",
+      "indonesian": "Proses / Pemrosesan"
+    },
+    {
+      "kanji": "画面",
+      "furigana": "がめん",
+      "latin": "gamen",
+      "english": "Screen",
+      "indonesian": "Layar"
+    },
+    {
+      "kanji": "端末",
+      "furigana": "たんまつ",
+      "latin": "tanmatsu",
+      "english": "Terminal / Device",
+      "indonesian": "Perangkat / Terminal"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a61d1ddc7bcc998658fcee6"
+  },
+  "name": "Set 15",
+  "items": [
+    {
+      "kanji": "通信",
+      "furigana": "つうしん",
+      "latin": "tsuushin",
+      "english": "Communication / Data",
+      "indonesian": "Komunikasi / Data"
+    },
+    {
+      "kanji": "開発",
+      "furigana": "かいはつ",
+      "latin": "kaihatsu",
+      "english": "Development",
+      "indonesian": "Pengembangan"
+    },
+    {
+      "kanji": "起動",
+      "furigana": "きどう",
+      "latin": "kidou",
+      "english": "Startup / Boot",
+      "indonesian": "Mulai / But (Booting)"
+    },
+    {
+      "kanji": "終了",
+      "furigana": "しゅうりょう",
+      "latin": "shuuryou",
+      "english": "Exit / End",
+      "indonesian": "Keluar / Selesai"
+    },
+    {
+      "kanji": "暗号化",
+      "furigana": "あんごうか",
+      "latin": "angou-ka",
+      "english": "Encryption",
+      "indonesian": "Enkripsi"
+    },
+    {
+      "kanji": "保存",
+      "furigana": "ほぞん",
+      "latin": "hozon",
+      "english": "Save",
+      "indonesian": "Simpan"
+    },
+    {
+      "kanji": "削除",
+      "furigana": "さくじょ",
+      "latin": "sakujo",
+      "english": "Delete",
+      "indonesian": "Hapus"
+    }
+  ],
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  }
+},
+{
+  "_id": {
+    "$oid": "6a86c9d687e40b8e68bc2748"
+  },
+  "owner": {
+    "$oid": "6a74bac987651dbbb3c2e71f"
+  },
+  "name": "Test",
+  "items": [
+    {
+      "kanji": "a",
+      "furigana": "a",
+      "latin": "a",
+      "english": "a",
+      "indonesian": "a"
+    },
+    {
+      "kanji": "b",
+      "furigana": "b",
+      "latin": "b",
+      "english": "b",
+      "indonesian": "b"
+    },
+    {
+      "kanji": "c",
+      "furigana": "c",
+      "latin": "c",
+      "english": "c",
+      "indonesian": "c"
+    },
+    {
+      "kanji": "d",
+      "furigana": "d",
+      "latin": "d",
+      "english": "d",
+      "indonesian": "d"
+    }
+  ]
+}]
