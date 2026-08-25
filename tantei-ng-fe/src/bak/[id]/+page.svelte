@@ -1,27 +1,36 @@
 <script lang="ts">
-	import type { PageProps } from './$types';
 	import play_button from '$lib/assets/play_button.png';
 	import edit_button from '$lib/assets/edit_button.png';
 	import { api } from '../../../aux/route';
-	import type { Studyword } from '../../../aux/data_interfaces';
-	import { resolve } from '$app/paths';
+	import { type Studyword, type Studyset } from '../../../aux/data_interfaces';
 
 	let {
 		data
-	}: PageProps = $props();
+	}: {
+		data: {
+			id: string;
+			o: Studyset;
+			c: Studyset;
+		};
+	} = $props();
+	// let dataCopy: NgSetItem[] = [...data.o];
 	let selectedQuestion = $state<Studyword | null>(null);
 	let availableAnswers: Studyword[] = $state([]);
 	let hasStarted: boolean = $state(false);
 	let remainingCounter: number = $state(0);
-	let itemsProxy : Studyword[] = structuredClone(data.res!.items)
+
+	// function restartSet() {
+	// 	data.c.items = structuredClone(data.o.items);
+	// 	remainingCounter = data.o.items.length;
+	// }
 
 	async function generateNewSequence() {
 		availableAnswers = [];
 
-		if (itemsProxy.length < 1) {
+		if (data.c.items.length < 1) {
 			// console.log('Refill imminent');
-			itemsProxy = structuredClone(data.res!.items);
-			remainingCounter = data.res!.items.length;
+			data.c.items = structuredClone(data.o.items);
+			remainingCounter = data.o.items.length;
 
 			let payload = {
 				set_id: data.id,
@@ -36,22 +45,22 @@
 
 		while (availableAnswers.length < 4) {
 			if (availableAnswers.length == 0) {
-				let randomNumber: number = Math.floor(Math.random() * itemsProxy.length);
+				let randomNumber: number = Math.floor(Math.random() * data.c.items.length);
 				// console.log(`Generated number: ${randomNumber}`);
-				selectedQuestion = itemsProxy[randomNumber];
-				availableAnswers.push(itemsProxy[randomNumber]);
-				itemsProxy.splice(randomNumber, 1);
+				selectedQuestion = data.c.items[randomNumber];
+				availableAnswers.push(data.c.items[randomNumber]);
+				data.c.items.splice(randomNumber, 1);
 				remainingCounter -= 1;
 				continue;
 			}
 
 			// Now the problem is that it may be double for the options
-			let randomNumber: number = Math.floor(Math.random() * data.res!.items.length);
-			while (data.res!.items[randomNumber].kanji === availableAnswers[0].kanji) {
-				randomNumber = Math.floor(Math.random() * data.res!.items.length);
+			let randomNumber: number = Math.floor(Math.random() * data.o.items.length);
+			while (data.o.items[randomNumber].kanji === availableAnswers[0].kanji) {
+				randomNumber = Math.floor(Math.random() * data.o.items.length);
 			}
 
-			availableAnswers.push(data.res!.items[randomNumber]);
+			availableAnswers.push(data.o.items[randomNumber]);
 		}
 
 		// console.log(`Before: ${JSON.stringify(availableAnswers)}`);
@@ -77,7 +86,7 @@
 
 	function handleStartButton() {
 		generateNewSequence();
-		remainingCounter = data.res!.items.length;
+		remainingCounter = data.o.items.length;
 		hasStarted = true;
 	}
 
@@ -132,14 +141,14 @@
 </script>
 
 <div class="flex flex-1">
-	{#if data.res!.items.length > 0}{:else}{/if}
+	{#if data.c.items.length > 0}{:else}{/if}
 
 	{#if !hasStarted}
 		<div class="flex flex-1 flex-col">
 			<div class="mb-10 flex flex-col rounded-b-2xl bg-[#E6E3D1]">
 				<div class="flex flex-col items-center justify-center space-y-4 p-8">
-					<p class="text-4xl font-bold">{data.res!.name}</p>
-					<p class="text-2xl font-bold">{data.res!.items.length} words</p>
+					<p class="text-4xl font-bold">{data.o.name}</p>
+					<p class="text-2xl font-bold">{data.o.items.length} words</p>
 				</div>
 				<div class="flex justify-center space-x-8 p-8">
 					<button onclick={handleStartButton}>
@@ -147,15 +156,11 @@
 					</button>
 
 					<img src={edit_button} alt="edit_button.svg" class="h-16" />
-
-					<a href={resolve(`/dashboard/hardcore/${data.id}`)}>
-						Needle in Haystack
-					</a>
 				</div>
 			</div>
 
 			<div class="mb-8 flex flex-wrap justify-center gap-5">
-				{#each data.res!.items as item, index (index)}
+				{#each data.o.items as item, index (index)}
 					<div class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#D5CEBE]">
 						<p class="text-2xl font-semibold">{item.kanji}</p>
 					</div>
@@ -164,7 +169,7 @@
 		</div>
 	{:else}
 		<div class="flex-1">
-			<p>{remainingCounter} / {data.res!.items.length}</p>
+			<p>{remainingCounter} / {data.o.items.length}</p>
 		</div>
 		<div class="flex flex-3 flex-col">
 			<div class="m-4 flex flex-1">
