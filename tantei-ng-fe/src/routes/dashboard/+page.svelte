@@ -34,7 +34,7 @@
 				href={resolve(`/dashboard/${_id}`)}
 				class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#D5CEBE]"
 			>
-				<p class="text-2xl font-semibold">{name}</p>
+				<p class="text-2xl font-semibold text-center">{name}</p>
 			</a>
 		{/each}
 		<a

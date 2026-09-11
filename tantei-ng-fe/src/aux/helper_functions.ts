@@ -1,3 +1,4 @@
+// Min and max number is included as a possibilty
 export function getRandomNum(min: number, max: number): number {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }

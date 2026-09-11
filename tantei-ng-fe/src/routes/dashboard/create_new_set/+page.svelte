@@ -4,11 +4,11 @@
 
 	let studysetName = $state('');
 	let studysetItems = $state<Studyword[]>([
-		{ kanji: '', furigana: '', latin: '', english: '', indonesian: '' }
+		{ kanji: '', furigana: '', latin: '', english: '', radical: '' }
 	]);
 
 	function handleAddNgItem() {
-		studysetItems.push({ kanji: '', furigana: '', latin: '', english: '', indonesian: '' });
+		studysetItems.push({ kanji: '', furigana: '', latin: '', english: '', radical: '' });
 	}
 
 	function handleRemoveNgItem() {
@@ -63,7 +63,7 @@
 				<input type="text" placeholder="Furigana" bind:value={item.furigana} />
 				<input type="text" placeholder="Latin" bind:value={item.latin} />
 				<input type="text" placeholder="English" bind:value={item.english} />
-				<input type="text" placeholder="Indonesian" bind:value={item.indonesian} />
+				<input type="text" placeholder="Indonesian" bind:value={item.radical} />
 			</div>
 		{/each}
 		<button onclick={handleAddNgItem}>Add</button>
@@ -80,7 +80,7 @@
 					<p>{item.furigana}</p>
 					<p>{item.latin}</p>
 					<p>{item.english}</p>
-					<p>{item.indonesian}</p>
+					<p>{item.radical}</p>
 				</div>
 			{/each}
 		</div>

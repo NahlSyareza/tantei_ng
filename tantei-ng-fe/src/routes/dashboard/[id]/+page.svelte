@@ -5,23 +5,20 @@
 	import { api } from '../../../aux/route';
 	import type { Studyword } from '../../../aux/data_interfaces';
 	import { resolve } from '$app/paths';
+	import { fisherYatesShuffler, getRandomNum } from '../../../aux/helper_functions';
 
-	let {
-		data
-	}: PageProps = $props();
-	let selectedQuestion = $state<Studyword | null>(null);
+	let { data }: PageProps = $props();
+	let selectedAnswer = $state<Studyword | null>(null);
 	let availableAnswers: Studyword[] = $state([]);
 	let hasStarted: boolean = $state(false);
-	let remainingCounter: number = $state(0);
-	let itemsProxy : Studyword[] = structuredClone(data.res!.items)
+	// let itemsProxy : Studyword[] = structuredClone(data.res!.items)
+	let itemsProxy: Studyword[] = $derived(structuredClone(data.res!.items));
 
 	async function generateNewSequence() {
-		availableAnswers = [];
-
+		// availableAnswers = [];
 		if (itemsProxy.length < 1) {
 			// console.log('Refill imminent');
 			itemsProxy = structuredClone(data.res!.items);
-			remainingCounter = data.res!.items.length;
 
 			let payload = {
 				set_id: data.id,
@@ -34,55 +31,45 @@
 			console.log(res.data);
 		}
 
-		while (availableAnswers.length < 4) {
-			if (availableAnswers.length == 0) {
-				let randomNumber: number = Math.floor(Math.random() * itemsProxy.length);
-				// console.log(`Generated number: ${randomNumber}`);
-				selectedQuestion = itemsProxy[randomNumber];
-				availableAnswers.push(itemsProxy[randomNumber]);
-				itemsProxy.splice(randomNumber, 1);
-				remainingCounter -= 1;
-				continue;
-			}
+		let randomNumber: number = getRandomNum(0, itemsProxy.length - 1);
+		// console.log(`Generated number: ${randomNumber}`);
+		selectedAnswer = itemsProxy[randomNumber];
+		let selectedAnswerProxy: Studyword = itemsProxy[randomNumber];
+		// availableAnswers.push(itemsProxy[randomNumber]);
+		itemsProxy.splice(randomNumber, 1);
 
+		console.log(selectedAnswerProxy);
+		console.log(selectedAnswer);
+
+		let availableAnswersProxy: Studyword[] = [];
+		availableAnswersProxy = [];
+
+		while (availableAnswersProxy.length < 4) {
 			// Now the problem is that it may be double for the options
-			let randomNumber: number = Math.floor(Math.random() * data.res!.items.length);
-			while (data.res!.items[randomNumber].kanji === availableAnswers[0].kanji) {
-				randomNumber = Math.floor(Math.random() * data.res!.items.length);
+			let randomNumber: number = getRandomNum(0, data.res!.items.length - 1);
+			let rolledItem: Studyword = data.res!.items[randomNumber];
+			if (!availableAnswersProxy.some((e) => e.kanji == rolledItem.kanji)) {
+				availableAnswersProxy.push(rolledItem);
 			}
-
-			availableAnswers.push(data.res!.items[randomNumber]);
 		}
 
-		// console.log(`Before: ${JSON.stringify(availableAnswers)}`);
-
-		availableAnswers = shuffle(availableAnswers);
-
-		// console.log(`After: ${JSON.stringify(availableAnswers)}`);
-
-		// console.log(selectedItems);
-		// console.log(data.o.items.length);
-		// console.log(data.c.items.length);
-	}
-
-	// Too lazy to make, so I get AI to make... THIS FUNCTION ONLY
-	function shuffle<T>(array: T[]): T[] {
-		const copy = [...array]; // 1. Create a shallow copy
-		for (let i = copy.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[copy[i], copy[j]] = [copy[j], copy[i]];
+		if (!availableAnswersProxy.some((e) => e.kanji == selectedAnswerProxy.kanji)) {
+			let lastIndex: number = availableAnswersProxy.length - 1;
+			availableAnswersProxy[lastIndex] = selectedAnswerProxy;
 		}
-		return copy; // 2. Return the new shuffled array
+
+		fisherYatesShuffler<Studyword>(availableAnswersProxy);
+
+		availableAnswers = availableAnswersProxy;
 	}
 
 	function handleStartButton() {
 		generateNewSequence();
-		remainingCounter = data.res!.items.length;
 		hasStarted = true;
 	}
 
 	function handleAnswerButtonClick(answer: string) {
-		if (selectedQuestion!.english === answer) {
+		if (selectedAnswer!.english === answer) {
 			generateNewSequence();
 		}
 		// console.log(`${answer}`);
@@ -92,7 +79,7 @@
 		let someBool: boolean = false;
 
 		if (someBool) {
-			if (item.english === selectedQuestion!.english) {
+			if (item.english === selectedAnswer!.english) {
 				return 'flex flex-1 text-2xl flex-1 rounded-xl bg-green-500';
 			} else {
 				return 'flex flex-1 text-2xl flex-1 rounded-xl bg-red-500';
@@ -142,15 +129,19 @@
 					<p class="text-2xl font-bold">{data.res!.items.length} words</p>
 				</div>
 				<div class="flex justify-center space-x-8 p-8">
-					<button onclick={handleStartButton}>
+					<button onclick={() => handleStartButton()}>
 						<img src={play_button} alt="play_button.svg" class="h-16" />
 					</button>
 
 					<img src={edit_button} alt="edit_button.svg" class="h-16" />
 
-					<a href={resolve(`/dashboard/hardcore/${data.id}`)}>
-						Needle in Haystack
-					</a>
+					<a
+						href={resolve(`/dashboard/hardcore/${data.id}`)}
+						class="flex aspect-square h-16 items-center justify-center rounded-4xl bg-red-600"
+						><p>Hack</p></a
+					>
+
+					<!-- <a href={resolve(`/dashboard/hardcore/${data.id}`)}> Needle in Haystack </a> -->
 				</div>
 			</div>
 
@@ -164,12 +155,12 @@
 		</div>
 	{:else}
 		<div class="flex-1">
-			<p>{remainingCounter} / {data.res!.items.length}</p>
+			<p>{itemsProxy.length} / {data.res!.items.length}</p>
 		</div>
 		<div class="flex flex-3 flex-col">
 			<div class="m-4 flex flex-1">
 				<div class="flex flex-1 items-center justify-center rounded-xl bg-[#D5CEBE]">
-					<p class="text-4xl font-semibold">{getQuestionDisplayType(selectedQuestion!)}</p>
+					<p class="text-4xl font-semibold">{getQuestionDisplayType(selectedAnswer!)}</p>
 				</div>
 			</div>
 			<div class="m-4 grid flex-1 grid-cols-2 gap-4">
