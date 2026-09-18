@@ -3,7 +3,7 @@ export interface Studyword {
 	furigana: string;
 	latin: string;
 	english: string;
-	radical: string;
+	// radical: string[];
 }
 
 export interface Studyset {

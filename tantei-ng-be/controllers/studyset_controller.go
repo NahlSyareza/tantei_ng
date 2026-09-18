@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"context"
+	"fmt"
 	"net/http"
-	"slices"
 	"tantei-ng/models"
 
 	"github.com/gin-gonic/gin"
@@ -67,20 +67,20 @@ func CreateNgSet(c *gin.Context) {
 
 	var err = c.BindJSON(&doc)
 
-	var detectedRadicals []string
+	// var detectedRadicals []string
 
-	if len(doc.Items) > 0 {
-		for _, value := range doc.Items {
-			for _, rad := range value.Radical {
-				if !slices.Contains(detectedRadicals, rad) {
-					detectedRadicals = append(detectedRadicals, rad)
-				}
-			}
+	// if len(doc.Items) > 0 {
+	// 	for _, value := range doc.Items {
+	// 		for _, rad := range value.Radical {
+	// 			if !slices.Contains(detectedRadicals, rad) {
+	// 				detectedRadicals = append(detectedRadicals, rad)
+	// 			}
+	// 		}
 
-		}
-	}
+	// 	}
+	// }
 
-	doc.IndexedRadicals = detectedRadicals
+	// doc.IndexedRadicals = detectedRadicals
 
 	if err != nil {
 		panic(err)
@@ -91,6 +91,37 @@ func CreateNgSet(c *gin.Context) {
 	c.IndentedJSON(http.StatusCreated, gin.H{
 		"message": "Created new set!",
 	})
+}
+
+type EditStudysetHelper struct {
+	Name  string                   `json:"name"`
+	Items []models.StudywordSchema `json:"items"`
+}
+
+func EditNgSet(c *gin.Context) {
+	collection := models.StudysetCollection()
+
+	var req EditStudysetHelper
+
+	c.BindJSON(&req)
+
+	collectionId, err := bson.ObjectIDFromHex(c.Param("studyset"))
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Print(req.Items)
+
+	// var doc models.StudysetSchema
+
+	filter := bson.D{{"_id", collectionId}}
+	update := bson.D{{"$set", bson.D{{"items", req.Items}}}}
+
+	_, err = collection.UpdateOne(context.TODO(), filter, update)
+	// err = collection.FindOne(context.TODO(), filter).Decode(&doc)
+
+	c.IndentedJSON(http.StatusOK, gin.H{"msg": "Astaga bercanda"})
 }
 
 func AddNgSetItems(c *gin.Context) {
@@ -111,18 +142,18 @@ func AddNgSetItems(c *gin.Context) {
 		panic(err)
 	}
 
-	var detectedRadicals []string
-	for _, value := range docs {
-		for _, rad := range value.Radical {
-			detectedRadicals = append(detectedRadicals, rad)
-		}
+	// var detectedRadicals []string
+	// for _, value := range docs {
+	// 	for _, rad := range value.Radical {
+	// 		detectedRadicals = append(detectedRadicals, rad)
+	// 	}
 
-	}
+	// }
 
 	// var result models.StudysetSchema
 
 	filter := bson.D{{"_id", studySetObjectID}}
-	update := bson.D{{"$push", bson.D{{"items", bson.D{{"$each", docs}}}}}, {"$addToSet", bson.D{{"indexed_radicals", bson.D{{"$each", detectedRadicals}}}}}}
+	update := bson.D{{"$push", bson.D{{"items", bson.D{{"$each", docs}}}}}}
 
 	_, err = collection.UpdateOne(context.TODO(), filter, update)
 
@@ -187,19 +218,15 @@ func TryIndexingRadicalsStudyset(c *gin.Context) {
 		panic(err)
 	}
 
-	var detectedRadicals []string
+	// var detectedRadicals []string
 
-	for _, val := range doc.Items {
-		for _, rad := range val.Radical {
-			if !slices.Contains(detectedRadicals, rad) {
-				detectedRadicals = append(detectedRadicals, rad)
-			}
-		}
-	}
-
-	update := bson.D{{"$addToSet", bson.D{{"indexed_radicals", bson.D{{"$each", detectedRadicals}}}}}}
-
-	_, err = collection.UpdateOne(context.TODO(), filter, update)
+	// for _, val := range doc.Items {
+	// 	for _, rad := range val.Radical {
+	// 		if !slices.Contains(detectedRadicals, rad) {
+	// 			detectedRadicals = append(detectedRadicals, rad)
+	// 		}
+	// 	}
+	// }
 
 	if err != nil {
 		panic(err)
@@ -208,34 +235,34 @@ func TryIndexingRadicalsStudyset(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, gin.H{"msg": "Radicals are successfully indexed for this studyset!"})
 }
 
-func GetCumulativeRadicalsFromOwnedStudyset(c *gin.Context) {
-	ownerParam := c.Param("owner")
-	ownerObjectID, err := bson.ObjectIDFromHex(ownerParam)
-
-	if err != nil {
-		panic(err)
-	}
-
-	collection := models.StudysetCollection()
-
-	filter := bson.D{{"owner", ownerObjectID}}
-	opts := options.Find().SetProjection(bson.D{{"owner", 0}, {"name", 0}, {"_id", 0}})
-
-	var docs []models.StudysetSchema
-
-	cursor, err := collection.Find(context.TODO(), filter, opts)
-
-	err = cursor.All(context.TODO(), &docs)
-
-	var unique_owned_radicals []string
-
-	for _, doc := range docs {
-		for _, radical := range doc.IndexedRadicals {
-			if !slices.Contains(unique_owned_radicals, radical) {
-				unique_owned_radicals = append(unique_owned_radicals, radical)
-			}
-		}
-	}
-
-	c.IndentedJSON(http.StatusOK, gin.H{"msg": "Success!", "payload": unique_owned_radicals})
-}
+// func GetCumulativeRadicalsFromOwnedStudyset(c *gin.Context) {
+// 	ownerParam := c.Param("owner")
+// 	ownerObjectID, err := bson.ObjectIDFromHex(ownerParam)
+//
+// 	if err != nil {
+// 		panic(err)
+// 	}
+//
+// 	collection := models.StudysetCollection()
+//
+// 	filter := bson.D{{"owner", ownerObjectID}}
+// 	opts := options.Find().SetProjection(bson.D{{"owner", 0}, {"name", 0}, {"_id", 0}})
+//
+// 	var docs []models.StudysetSchema
+//
+// 	cursor, err := collection.Find(context.TODO(), filter, opts)
+//
+// 	err = cursor.All(context.TODO(), &docs)
+//
+// 	var unique_owned_radicals []string
+//
+// 	for _, doc := range docs {
+// 		for _, radical := range doc.IndexedRadicals {
+// 			if !slices.Contains(unique_owned_radicals, radical) {
+// 				unique_owned_radicals = append(unique_owned_radicals, radical)
+// 			}
+// 		}
+// 	}
+//
+// 	c.IndentedJSON(http.StatusOK, gin.H{"msg": "Success!", "payload": unique_owned_radicals})
+// }

@@ -38,7 +38,7 @@
 			</a>
 		{/each}
 		<a
-			href={resolve('/dashboard/create_new_set')}
+			href={resolve('/dashboard/create_studyset')}
 			class="flex h-50 w-50 items-center justify-center rounded-xl bg-[#E6E3D1]"
 		>
 			<p class="text-4xl font-semibold">+</p>

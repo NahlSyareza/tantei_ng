@@ -11,13 +11,10 @@
 	let selectedAnswer = $state<Studyword | null>(null);
 	let availableAnswers: Studyword[] = $state([]);
 	let hasStarted: boolean = $state(false);
-	// let itemsProxy : Studyword[] = structuredClone(data.res!.items)
 	let itemsProxy: Studyword[] = $derived(structuredClone(data.res!.items));
 
 	async function generateNewSequence() {
-		// availableAnswers = [];
 		if (itemsProxy.length < 1) {
-			// console.log('Refill imminent');
 			itemsProxy = structuredClone(data.res!.items);
 
 			let payload = {
@@ -32,10 +29,8 @@
 		}
 
 		let randomNumber: number = getRandomNum(0, itemsProxy.length - 1);
-		// console.log(`Generated number: ${randomNumber}`);
 		selectedAnswer = itemsProxy[randomNumber];
 		let selectedAnswerProxy: Studyword = itemsProxy[randomNumber];
-		// availableAnswers.push(itemsProxy[randomNumber]);
 		itemsProxy.splice(randomNumber, 1);
 
 		console.log(selectedAnswerProxy);
@@ -45,7 +40,6 @@
 		availableAnswersProxy = [];
 
 		while (availableAnswersProxy.length < 4) {
-			// Now the problem is that it may be double for the options
 			let randomNumber: number = getRandomNum(0, data.res!.items.length - 1);
 			let rolledItem: Studyword = data.res!.items[randomNumber];
 			if (!availableAnswersProxy.some((e) => e.kanji == rolledItem.kanji)) {
@@ -64,6 +58,11 @@
 	}
 
 	function handleStartButton() {
+		if (data.res!.items.length < 4) {
+			console.log('Items must be AT LEATST 5');
+			return;
+		}
+
 		generateNewSequence();
 		hasStarted = true;
 	}
@@ -72,7 +71,6 @@
 		if (selectedAnswer!.english === answer) {
 			generateNewSequence();
 		}
-		// console.log(`${answer}`);
 	}
 
 	function getStyle(item: Studyword) {
@@ -133,7 +131,10 @@
 						<img src={play_button} alt="play_button.svg" class="h-16" />
 					</button>
 
-					<img src={edit_button} alt="edit_button.svg" class="h-16" />
+					<a href={resolve(`/dashboard/${data.id}/edit`)}>
+						<img src={edit_button} alt="edit_button.svg" class="h-16" />
+						<!-- <p>Edit</p> -->
+					</a>
 
 					<a
 						href={resolve(`/dashboard/hardcore/${data.id}`)}

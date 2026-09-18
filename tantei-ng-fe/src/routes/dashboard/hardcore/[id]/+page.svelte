@@ -31,15 +31,9 @@
 		}
 
 		let diceNum: number = getRandomNum(0, itemsProxy.length - 1);
-		// console.log(`Spliced ${itemsProxy[diceNum].kanji}`);
 		selectedAnswer = itemsProxy[diceNum];
 		let selectedAnswerProxy: Studyword = itemsProxy[diceNum];
-		// console.log(`Remaining:`);
 		itemsProxy.splice(diceNum, 1);
-		// console.log(`Remaining items: ${itemsProxy.length}`);
-		// itemsProxy.forEach((e) => {
-		// 	console.log(e.kanji);
-		// });
 
 		let maxPoolLength: number = data.res?.items.length;
 		diceNum = getRandomNum(Math.ceil(0.25 * maxPoolLength), maxPoolLength);
