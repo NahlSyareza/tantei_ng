@@ -1,6 +1,7 @@
 package models
 
 import (
+	"fmt"
 	"tantei-ng/db"
 	"time"
 
@@ -18,10 +19,10 @@ type StudywordSchema struct {
 }
 
 type StudysetSchema struct {
-	Id              bson.ObjectID     `bson:"_id,omitempty" json:"_id,omitempty"`
-	Owner           bson.ObjectID     `bson:"owner" json:"owner"`
-	Name            string            `bson:"name" json:"name"`
-	Items           []StudywordSchema `bson:"items,omitempty" json:"items,omitempty"`
+	Id    bson.ObjectID     `bson:"_id,omitempty" json:"_id,omitempty"`
+	Owner bson.ObjectID     `bson:"owner" json:"owner"`
+	Name  string            `bson:"name" json:"name"`
+	Items []StudywordSchema `bson:"items,omitempty" json:"items,omitempty"`
 	// IndexedRadicals []string          `bson:"indexed_radicals,omitempty" json:"indexed_radicals,omitempty"`
 	// CreatedAt time.Time      `bson:"createdAt,omitempty" json:"createdAt,omitempty"`
 	// UpdatedAt time.Time      `bson:"updatedAt,omitempty" json:"updatedAt,omitempty"`
@@ -56,29 +57,40 @@ type TrackerSchema struct {
 }
 
 func RadicalListCollection() *mongo.Collection {
-	dbClient := db.DbConnect()
-	collection := dbClient.Database("tantei").Collection("radical_lists")
+	collection := db.Client.Database("tantei").Collection("radical_lists")
 
 	return collection
 }
 
 func StudysetCollection() *mongo.Collection {
-	var dbClient *mongo.Client = db.DbConnect()
-	var collection *mongo.Collection = dbClient.Database("tantei").Collection("studysets")
+	if db.Client == nil {
+		fmt.Printf("Database client error!")
+		return nil
+	}
+
+	collection := db.Client.Database("tantei").Collection("studysets")
 
 	return collection
 }
 
 func AccountCollection() *mongo.Collection {
-	var dbClient *mongo.Client = db.DbConnect()
-	var collection *mongo.Collection = dbClient.Database("tantei").Collection("accounts")
+	if db.Client == nil {
+		fmt.Printf("Database client error!")
+		return nil
+	}
+
+	collection := db.Client.Database("tantei").Collection("accounts")
 
 	return collection
 }
 
 func TrackerCollection() *mongo.Collection {
-	var dbClient *mongo.Client = db.DbConnect()
-	var collection *mongo.Collection = dbClient.Database("tantei").Collection("trackers")
+	if db.Client == nil {
+		fmt.Printf("Database client error!")
+		return nil
+	}
+
+	collection := db.Client.Database("tantei").Collection("trackers")
 
 	return collection
 }

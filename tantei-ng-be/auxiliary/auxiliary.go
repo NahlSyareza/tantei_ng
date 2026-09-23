@@ -11,8 +11,7 @@ import (
 )
 
 func Populate(test *bson.M, field_name string, ref_collection_name string, opts bson.D) {
-	var dbClient = db.DbConnect()
-	var ref_collection = dbClient.Database("tantei").Collection(ref_collection_name)
+	var ref_collection = db.Client.Database("tantei").Collection(ref_collection_name)
 	var err error
 	var end_result []bson.M
 

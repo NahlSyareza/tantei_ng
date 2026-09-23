@@ -4,10 +4,12 @@ import (
 	"context"
 	"errors"
 	"net/http"
+	"tantei-ng/jsonwebtoken"
 	"tantei-ng/models"
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/golang-jwt/jwt/v5"
 	"go.mongodb.org/mongo-driver/v2/bson"
 	"go.mongodb.org/mongo-driver/v2/mongo"
 	"go.mongodb.org/mongo-driver/v2/mongo/options"
@@ -35,15 +37,15 @@ func RegisterAccount(c *gin.Context) {
 	})
 }
 
-type accountLogin struct {
-	Email    string `json:"email"`
-	Password string `json:"password"`
-}
-
 func LoginAccount(c *gin.Context) {
-	var loginDoc accountLogin
+	type Req struct {
+		Email    string `json:"email"`
+		Password string `json:"password"`
+	}
 
-	var err = c.BindJSON(&loginDoc)
+	var req Req
+
+	var err = c.BindJSON(&req)
 
 	if err != nil {
 		panic(err)
@@ -53,22 +55,45 @@ func LoginAccount(c *gin.Context) {
 
 	var collection = models.AccountCollection()
 
-	var filter = bson.M{"email": loginDoc.Email}
+	var filter = bson.M{"email": req.Email, "password": req.Password}
 
 	err = collection.FindOne(context.TODO(), filter).Decode(&doc)
 
-	if loginDoc.Password != doc.Password {
-		c.IndentedJSON(http.StatusOK, gin.H{
-			"message": "Wrong password, blyat",
-		})
+	if err != nil {
+		switch err {
+		case mongo.ErrNoDocuments:
+			c.JSON(http.StatusOK, gin.H{
+				"msg": "Incorrect username or password!",
+			})
 
-		return
+		default:
+			c.JSON(http.StatusInternalServerError, gin.H{
+				"msg": "Internal server error",
+			})
+		}
+
+		panic(err)
 	}
+
+	claims := jwt.RegisteredClaims{
+		IssuedAt:  jwt.NewNumericDate(time.Now()),
+		ExpiresAt: jwt.NewNumericDate(time.Now().Add(30 * time.Minute)),
+		Issuer:    "江戸川コナン",
+		Subject:   doc.Id.Hex(),
+	}
+
+	token := jwt.NewWithClaims(jwt.SigningMethodES256, claims)
+
+	s, err := token.SignedString(jsonwebtoken.PriKey)
+
+	c.SetSameSite(http.SameSiteStrictMode)
+	c.SetCookie("token", s, 1800, "/", "", false, true)
 
 	OwnedSetsAccount(doc.Id.Hex())
 
 	c.IndentedJSON(http.StatusOK, gin.H{
-		"message": "Correct password, blin",
+		"msg":   "Login success!!",
+		"token": s,
 	})
 }
 

@@ -6,6 +6,10 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+func RequiresAuthRoutes(router *gin.RouterGroup) {
+	router.GET("/test_jwt", controllers.TestCtrller)
+}
+
 func NgSetRoutes(router *gin.Engine) {
 	router.GET("/studysets/:owner", controllers.GetNgSets)
 	router.GET("/studyset/:studyset", controllers.GetNgSet)

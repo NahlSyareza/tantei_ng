@@ -9,10 +9,12 @@ import (
 	"go.mongodb.org/mongo-driver/v2/mongo/options"
 )
 
-func DbConnect() *mongo.Client {
+var Client *mongo.Client
+
+func DbConnect() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Println("No .env file found!")
+		log.Println("Godotenv failed to load!")
 	}
 
 	var uri string = os.Getenv("MONGODB_URI")
@@ -23,11 +25,9 @@ func DbConnect() *mongo.Client {
 			"usage-examples/#environment-variable")
 	}
 
-	client, err := mongo.Connect(options.Client().ApplyURI(uri))
+	Client, err = mongo.Connect(options.Client().ApplyURI(uri))
 	if err != nil {
 		// Perhaps something better than panic is better
 		panic(err)
 	}
-
-	return client
 }

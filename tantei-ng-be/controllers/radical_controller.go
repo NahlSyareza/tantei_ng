@@ -94,5 +94,3 @@ func AddItemsRadicalList(c *gin.Context) {
 
 	c.IndentedJSON(http.StatusOK, gin.H{"msg": "Successfully added new items"})
 }
-
-

@@ -3,6 +3,9 @@ package main
 import (
 	"log"
 	"os"
+	"tantei-ng/db"
+	"tantei-ng/jsonwebtoken"
+	"tantei-ng/middlewares"
 	"tantei-ng/routes"
 
 	"github.com/gin-contrib/cors"
@@ -10,28 +13,18 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// func CORSMiddleware() gin.HandlerFunc {
-// 	return func(c *gin.Context) {
-// 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
-// 		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
-// 		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
-// 		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS, GET, PUT, DELETE")
-
-// 		// Handle the browser preflight OPTIONS check
-// 		if c.Request.Method == "OPTIONS" {
-// 			c.AbortWithStatus(http.StatusNoContent) // Returns 204 with headers attached
-// 			return
-// 		}
-
-// 		c.Next()
-// 	}
-// }
-
 func main() {
-	var router *gin.Engine = gin.Default()
+	jsonwebtoken.GenerateKeyPairs()
+
+	db.DbConnect()
+
+	// EDIT THIS AIGHT
+	// gin.SetMode(gin.ReleaseMode)
+
+	router := gin.Default()
 
 	router.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:5173"},
+		AllowOrigins:     []string{"http://localhost:5173", "http://localhost:4173"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Accept", "Authorization"},
 		ExposeHeaders:    []string{"Content-Length"},
@@ -44,12 +37,16 @@ func main() {
 		})
 	})
 
+	requiresAuthRouter := router.Group("/")
+	requiresAuthRouter.Use(middlewares.AuthenticateJWT())
+	routes.RequiresAuthRoutes(requiresAuthRouter)
+
 	// routes.WordRoutes(router)
 	routes.NgSetRoutes(router)
 
 	err := godotenv.Load()
 	if err != nil {
-		log.Println("No .env file found!")
+		log.Println("Godotenv failed to load!")
 	}
 
 	port := os.Getenv("PORT")

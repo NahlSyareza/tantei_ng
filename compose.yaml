@@ -1,0 +1,13 @@
+services:
+  backend:
+    image: tantei-ng-be:latest
+    ports:
+      - '28080:28080'
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - PORT=${BE_PORT}
+
+  frontend:
+    image: tantei-ng-fe:latest
+    ports:
+      - '4173:4173'
